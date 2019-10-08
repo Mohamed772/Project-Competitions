@@ -13,6 +13,7 @@ int compteur_dossard = 1;
 int compteur_nb_equipes = 0;
 
 
+
 typedef struct
 {
 	char nom[lgMot + 1];
@@ -28,6 +29,7 @@ typedef struct
 typedef struct
 {
 	Equipe equipes[MAX_EQUIPE];
+
 }Equipes;
 
 Equipes liste_equipes;
@@ -36,17 +38,13 @@ void inscrire_equipe(Equipe* e) {
 
 	if (compteur_nb_equipes <= MAX_EQUIPE) {
 
-		scanf("%s", e->pays);
+		scanf("%s %s %s %s", e->pays, e->personnes[0].nom, e->personnes[1].nom, e->personnes[2].nom);
 
 		for (int i = 0; i <= MAX_JOUEUR_PAR_EQUIPE - 1; ++i) {
-
-			scanf("%s", e->personnes[i].nom);
-			e->personnes[i].num_dossard = DOSSARD + compteur_dossard;
-
-			printf("inscription dossard %d\n", e->personnes[i].num_dossard);
-
-			++compteur_dossard;
+			e->personnes[i].num_dossard = DOSSARD + compteur_dossard++;
+			printf("inscription dossard %s %d\n", e->personnes[i].nom, e->personnes[i].num_dossard);
 		}
+
 		liste_equipes.equipes[compteur_nb_equipes] = *e;
 		++compteur_nb_equipes;
 	}
@@ -54,15 +52,20 @@ void inscrire_equipe(Equipe* e) {
 		printf("Vous avez déjà atteint le nombre d'équipe maximale");
 
 }
-void afficher_equipes(const Equipe* e) {
-	printf("%s %s %u %s %u %s %u\n", e->pays, e->personnes[0].nom, e->personnes[0].num_dossard, e->personnes[1].nom,
-									 e->personnes[1].num_dossard, e->personnes[2].nom, e->personnes[2].num_dossard);
+void afficher_equipes(const Equipes* liste_equipes) {
+	Equipe e;
+	for (int i = 0; i < compteur_nb_equipes; i++) {
+		e = liste_equipes->equipes[i];
+		printf("%s %s %u %s %u %s %u\n", e.pays, e.personnes[0].nom, e.personnes[0].num_dossard, e.personnes[1].nom,
+			e.personnes[1].num_dossard, e.personnes[2].nom, e.personnes[2].num_dossard);
+		
+	}
 }
 
 int main() {
-	
 	Equipe e;
 	char mot[lgMot];
+
 
 	do {
 
@@ -71,9 +74,7 @@ int main() {
 			inscrire_equipe(&e);
 		}
 		if (strcmp(mot, "afficher_equipes") == 0) {
-			for (int i = 0; i < compteur_nb_equipes; i++) {
-				afficher_equipes(&liste_equipes.equipes[i]);
-			}
+			afficher_equipes(&liste_equipes);
 		}
 	} while (strcmp(mot, "exit") != 0);
 	exit(0);
