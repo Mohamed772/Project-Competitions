@@ -1,4 +1,0 @@
-inscrire_equipe Canada Blondin Weidemann Morrison
-inscrire_equipe Japon Takagi Sato Takagu
-afficher_equipes
-exit
