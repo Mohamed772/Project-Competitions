@@ -1,8 +1,0 @@
-inscription dossard Blondin 101
-inscription dossard Weidemann 102
-inscription dossard Morrison 103
-inscription dossard Takagi 104
-inscription dossard Sato 105
-inscription dossard Takagu 106
-Canada Blondin 101 Weidemann 102 Morrison 103
-Japon Takagi 104 Sato 105 Takagu 106

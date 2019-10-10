@@ -21,6 +21,7 @@ typedef struct {
 	char nom[lgMot + 1];
 	unsigned int num_dossard;
 	Mesure liste_temps[MAX_TOUR];
+	unsigned int tours;
 } Patineur;
 
 typedef struct {
@@ -62,24 +63,52 @@ void afficher_equipes(const Course* liste_equipes) {
 
 void trouver_dossard(unsigned int dossard, unsigned int* num_equipe, unsigned int* num_patineur) {
 	dossard -= 100;
-	*num_equipe = (dossard / 3);
-	*num_patineur = (dossard % 3);
+
+	if ((dossard % 3) == 0) {
+		*num_equipe = (dossard / 3) - 1;
+		*num_patineur = 2;
+	}
+	else {
+		*num_equipe = (dossard / 3);
+		*num_patineur = (dossard % 3) - 1;
+	}
 }
 
 void enregistrement_temps(Course* liste_equipes) {
-	unsigned int num_equipe, num_patineur;
-	unsigned int dossard, num_tours;
+	unsigned int num_equipe, num_patineur, dossard, num_tours;
 	float temps;
 
-	scanf("%d %d %f", &dossard, &num_tours, &temps);
-	trouver_dossard(dossard, &num_equipe, &num_patineur);
+	scanf("%u %u %f", &dossard, &num_tours, &temps);
+	if (num_tours <= MAX_TOUR) {
+		trouver_dossard(dossard, &num_equipe, &num_patineur);
 
-	liste_equipes->equipes[num_equipe].personnes[num_patineur].liste_temps[num_tours - 1].temps = temps;
-	printf("%d %d %d %f %f", num_equipe, num_patineur, num_tours, temps, liste_equipes->equipes[num_equipe].personnes[num_patineur].liste_temps[num_tours - 1].temps);
+		liste_equipes->equipes[num_equipe].personnes[num_patineur].tours = num_tours;
+		liste_equipes->equipes[num_equipe].personnes[num_patineur].liste_temps[num_tours - 1].temps = temps;
+
+		printf("%d %d %d %f %f\n", num_equipe, num_patineur, num_tours, temps, liste_equipes->equipes[num_equipe].personnes[num_patineur].liste_temps[num_tours - 1].temps);
+	}
+	else printf("Heu ca fais pas un peu beaucoup la non ?");
+	
 }
 
 void affichage_temps(const Course* liste_equipes) {
+	unsigned int num_equipe, num_patineur, dossard, num_tours=0 ,i=0;
+	
 
+	scanf("%u", &dossard);
+	trouver_dossard(dossard, &num_equipe, &num_patineur);
+
+	num_tours = liste_equipes->equipes[num_equipe].personnes[num_patineur].tours;
+
+	while (i < num_tours) {
+
+		printf("%s %u %s %1f\n", liste_equipes->equipes[num_equipe].pays,
+								i+1,
+								liste_equipes->equipes[num_equipe].personnes[num_patineur].nom,
+								liste_equipes->equipes[num_equipe].personnes[num_patineur].liste_temps[i].temps);
+		i++;
+	}
+	
 }
 
 int main() {

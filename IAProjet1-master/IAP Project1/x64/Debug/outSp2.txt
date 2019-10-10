@@ -1,0 +1,16 @@
+inscription dossard Blondin 101
+inscription dossard Weidemann 102
+inscription dossard Morrison 103
+inscription dossard Takagi 104
+inscription dossard Sato 105
+inscription dossard Takagu 106
+0 0 1 53.099998 53.099998
+0 1 1 53.200001 53.200001
+1 0 1 53.299999 53.299999
+1 1 1 53.700001 53.700001
+1 2 1 53.900002 53.900002
+0 2 1 54.099998 54.099998
+1 1 2 100.599998 100.599998
+Canada 1 Weidemann 53.200001
+Japon 1 Sato 53.700001
+Japon 2 Sato 100.599998
