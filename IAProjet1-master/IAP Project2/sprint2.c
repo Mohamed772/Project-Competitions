@@ -14,6 +14,10 @@ int compteur_dossard = 1;
 int compteur_nb_equipes = 0;
 
 typedef struct {
+	float temps;
+} Mesure;
+
+typedef struct {
 	char nom[lgMot + 1];
 	unsigned int num_dossard;
 	Mesure liste_temps[MAX_TOUR];
@@ -28,9 +32,7 @@ typedef struct {
 	Equipe equipes[MAX_EQUIPE];
 } Course;
 
-typedef struct {
-	float temps;
-} Mesure;
+
 
 
 
@@ -58,12 +60,22 @@ void afficher_equipes(const Course* liste_equipes) {
 	}
 }
 
-
+void trouver_dossard(unsigned int dossard, unsigned int* num_equipe, unsigned int* num_patineur) {
+	dossard -= 100;
+	*num_equipe = (dossard / 3);
+	*num_patineur = (dossard % 3);
+}
 
 void enregistrement_temps(Course* liste_equipes) {
+	unsigned int num_equipe, num_patineur;
 	unsigned int dossard, num_tours;
 	float temps;
-	scanf("%d %d %f", dossard, num_tours, temps);
+
+	scanf("%d %d %f", &dossard, &num_tours, &temps);
+	trouver_dossard(dossard, &num_equipe, &num_patineur);
+
+	liste_equipes->equipes[num_equipe].personnes[num_patineur].liste_temps[num_tours - 1].temps = temps;
+	printf("%d %d %d %f %f", num_equipe, num_patineur, num_tours, temps, liste_equipes->equipes[num_equipe].personnes[num_patineur].liste_temps[num_tours - 1].temps);
 }
 
 void affichage_temps(const Course* liste_equipes) {
@@ -84,10 +96,10 @@ int main() {
 			afficher_equipes(&liste_equipes);
 		}
 		if (strcmp(mot, "enregistrer_temps") == 0) {
-			enregistrement_temps(void);
+			enregistrement_temps(&liste_equipes);
 		}
 		if (strcmp(mot, "afficher_temps") == 0) {
-			affichage_temps;
+			affichage_temps(&liste_equipes);
 		}
 	} while (strcmp(mot, "exit") != 0);
 	exit(0);
