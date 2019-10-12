@@ -32,11 +32,19 @@ typedef struct {
 Equipes liste_equipes;
 
 void inscrire_equipe(Equipe* e) {
+	char mot[lgMot];
 	if (compteur_nb_equipes <= MAX_EQUIPE) {
-		scanf("%s %s %s %s", e->pays, e->personnes[0].nom, e->personnes[1].nom, e->personnes[2].nom);
+		scanf("%s", &mot);
+		strcpy(e->pays, mot);
+
+		for (int i = 0; i <= MAX_JOUEUR_PAR_EQUIPE - 1; ++i) {
+			scanf("%s", &mot);
+			strcpy(e->personnes[i].nom, mot);
+		}
+
 		for (int i = 0; i <= MAX_JOUEUR_PAR_EQUIPE - 1; ++i) {
 			e->personnes[i].num_dossard = DOSSARD + compteur_dossard++;
-			printf("inscription dossard %s %d\n", e->personnes[i].nom, e->personnes[i].num_dossard);
+			printf("inscription dossard %d\n", e->personnes[i].num_dossard);
 		}
 		liste_equipes.equipes[compteur_nb_equipes] = *e;
 		++compteur_nb_equipes;
@@ -61,6 +69,7 @@ int main() {
 
 	do {
 		scanf("%s", &mot);
+
 		if (strcmp(mot, "inscrire_equipe") == 0) {
 			inscrire_equipe(&e);
 		}
