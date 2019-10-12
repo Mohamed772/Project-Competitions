@@ -7,6 +7,7 @@
 #define lgMot 50
 #define MAX_EQUIPE 32
 #define MAX_TOUR 10
+#define NB_EQUIPE_EPREUVE 2
 
 #pragma warning(disable : 4996)
 
@@ -39,7 +40,7 @@ typedef struct {
 
 
 void inscrire_equipe(Equipe* e, Course* liste_equipes) {
-	char mot[lgMot+1];
+	char mot[lgMot + 1];
 	if (compteur_nb_equipes <= MAX_EQUIPE) {
 		scanf("%s", &mot);
 		strcpy(e->pays, mot);
@@ -94,12 +95,12 @@ void enregistrement_temps(Course* liste_equipes) {
 		liste_equipes->equipes[num_equipe].personnes[num_patineur].liste_temps[num_tours - 1].temps = temps;
 	}
 	else printf("Heu ca fais pas un peu beaucoup la non ?");
-	
+
 }
 
 void affichage_temps(const Course* liste_equipes) {
-	unsigned int num_equipe, num_patineur, dossard, num_tours=0 ,i=0;
-	
+	unsigned int num_equipe, num_patineur, dossard, num_tours = 0, i = 0;
+
 
 	scanf("%u", &dossard);
 	trouver_dossard(dossard, &num_equipe, &num_patineur);
@@ -109,18 +110,62 @@ void affichage_temps(const Course* liste_equipes) {
 	while (i < num_tours) {
 
 		printf("%s %u %s %.1f\n", liste_equipes->equipes[num_equipe].pays,
-								i+1,
-								liste_equipes->equipes[num_equipe].personnes[num_patineur].nom,
-								liste_equipes->equipes[num_equipe].personnes[num_patineur].liste_temps[i].temps);
+			i + 1,
+			liste_equipes->equipes[num_equipe].personnes[num_patineur].nom,
+			liste_equipes->equipes[num_equipe].personnes[num_patineur].liste_temps[i].temps);
 		i++;
 	}
-	
+}
+
+int compare_tour_equipe(Course liste_equipes, int i) {
+	unsigned int a = 0; a = liste_equipes.equipes[i].personnes[0].tours;
+	unsigned int b = 0; b = liste_equipes.equipes[i].personnes[1].tours;
+	unsigned int c = 0; c = liste_equipes.equipes[i].personnes[2].tours;
+
+	if ((a <= b) && (a <= c)) {
+		return a;
+	}
+	else if (b <= c) {
+		return b;
+	}
+	else 
+		return c;
+}
+
+
+void affichage_temps_equipes(Course* liste_equipes) {
+	int tour_actuel = 0;
+	int equipe1 = compare_tour_equipe(*liste_equipes, 0), equipe2 = compare_tour_equipe(*liste_equipes, 1);
+
+	if (equipe1 >= equipe2) {
+		tour_actuel = equipe2;
+	}
+	else tour_actuel = equipe1;
+
+	for (int i = 0; i < NB_EQUIPE_EPREUVE; i++){
+		float patineur0 = 0.;
+		patineur0 = liste_equipes->equipes[i].personnes[0].liste_temps[tour_actuel - 1].temps;
+		float patineur1 = 0.; 
+		patineur1 = liste_equipes->equipes[i].personnes[1].liste_temps[tour_actuel - 1].temps;
+		float patineur2 = 0.; 
+		patineur2 = liste_equipes->equipes[i].personnes[2].liste_temps[tour_actuel - 1].temps;
+
+		if ((&patineur0 >= &patineur1) && (&patineur0 >= &patineur2	)) {
+			printf("%s %.1f\n", liste_equipes->equipes[i].pays, patineur0);
+		}
+		else if (&patineur1 >= &patineur2) {
+			printf("%s %.1f\n", liste_equipes->equipes[i].pays, patineur1);
+
+		}
+		else
+			printf("%s %.1f\n", liste_equipes->equipes[i].pays, patineur2);
+	}
 }
 
 int main() {
 	Course liste_equipes;
 	Equipe e;
-	char mot[lgMot+1];
+	char mot[lgMot + 1];
 
 	do {
 		scanf("%s", &mot);
@@ -135,6 +180,9 @@ int main() {
 		}
 		if (strcmp(mot, "afficher_temps") == 0) {
 			affichage_temps(&liste_equipes);
+		}
+		if (strcmp(mot, "afficher_temps_equipes") == 0) {
+			affichage_temps_equipes(&liste_equipes);
 		}
 	} while (strcmp(mot, "exit") != 0);
 	exit(0);

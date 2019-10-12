@@ -1,0 +1,11 @@
+inscrire_equipe Canada Blondin Weidemann Morrison
+inscrire_equipe Japon Takagi Sato Takagu
+enregistrer_temps 101 1 53.1
+enregistrer_temps 102 1 53.2
+enregistrer_temps 104 1 53.3
+enregistrer_temps 105 1 53.7
+enregistrer_temps 106 1 53.9
+enregistrer_temps 103 1 54.1
+enregistrer_temps 105 2 100.6
+afficher_temps_equipes
+exit

@@ -32,7 +32,7 @@ typedef struct {
 Equipes liste_equipes;
 
 void inscrire_equipe(Equipe* e) {
-	char mot[lgMot];
+	char mot[lgMot+1];
 	if (compteur_nb_equipes <= MAX_EQUIPE) {
 		scanf("%s", &mot);
 		strcpy(e->pays, mot);
@@ -65,7 +65,7 @@ void afficher_equipes(const Equipes* liste_equipes) {
 
 int main() {
 	Equipe e;
-	char mot[lgMot];
+	char mot[lgMot+1];
 
 	do {
 		scanf("%s", &mot);

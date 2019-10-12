@@ -4,6 +4,5 @@ inscription dossard 103
 inscription dossard 104
 inscription dossard 105
 inscription dossard 106
-Canada 1 Weidemann 53.2
-Japon 1 Sato 53.7
-Japon 2 Sato 100.6
+Canada 54.1
+Japon 53.9
