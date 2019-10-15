@@ -135,7 +135,8 @@ int compare_tour_equipe(Course liste_equipes, int i) {
 
 void affichage_temps_equipes(Course* liste_equipes) {
 	int tour_actuel = 0;
-	int equipe1 = compare_tour_equipe(*liste_equipes, 0), equipe2 = compare_tour_equipe(*liste_equipes, 1);
+	int equipe1 = compare_tour_equipe(*liste_equipes, 0),
+		equipe2 = compare_tour_equipe(*liste_equipes, 1);
 
 	if (equipe1 >= equipe2) {
 		tour_actuel = equipe2;

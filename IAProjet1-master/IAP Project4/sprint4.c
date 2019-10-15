@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#pragma warning(disable : 4996)
 
 #define MAX_JOUEUR_PAR_EQUIPE 3
 #define DOSSARD 100
@@ -9,11 +10,8 @@
 #define MAX_TOUR 10
 #define NB_EQUIPE_EPREUVE 2
 
-#pragma warning(disable : 4996)
-
 int compteur_dossard = 1;
 int compteur_nb_equipes = 0;
-unsigned int tour_actuel = 0;
 
 typedef struct {
 	float temps;
@@ -33,12 +31,8 @@ typedef struct {
 
 typedef struct {
 	Equipe equipes[MAX_EQUIPE];
+	unsigned int tour_actuel;
 } Course;
-
-
-
-
-
 
 void inscrire_equipe(Equipe* e, Course* liste_equipes) {
 	char mot[lgMot + 1];
@@ -118,7 +112,7 @@ void affichage_temps(const Course* liste_equipes) {
 	}
 }
 
-/*int compare_tour_equipe(Course liste_equipes, int i) {
+int compare_tour_equipe(Course liste_equipes, int i) {
 	unsigned int a = 0; a = liste_equipes.equipes[i].personnes[0].tours;
 	unsigned int b = 0; b = liste_equipes.equipes[i].personnes[1].tours;
 	unsigned int c = 0; c = liste_equipes.equipes[i].personnes[2].tours;
@@ -131,22 +125,29 @@ void affichage_temps(const Course* liste_equipes) {
 	}
 	else
 		return c;
-}*/
+}
 
 
 void afficher_temps_equipes(Course* liste_equipes) {
 
 	float temps_equipe[2];
+	int equipe1 = compare_tour_equipe(*liste_equipes, 0),
+		equipe2 = compare_tour_equipe(*liste_equipes, 1);
+
+	if (equipe1 >= equipe2) {
+		tour_actuel = equipe2;
+	}
+	else tour_actuel = equipe1;
 
 	for (int i = 0; i < NB_EQUIPE_EPREUVE; i++) {
 		float patineur0 = 0.;
-		patineur0 = liste_equipes->equipes[i].personnes[0].liste_temps[tour_actuel - 1].temps;
+		patineur0 = liste_equipes->equipes[i].personnes[0].liste_temps[liste_equipes->tour_actuel - 1].temps;
 		float patineur1 = 0.;
-		patineur1 = liste_equipes->equipes[i].personnes[1].liste_temps[tour_actuel - 1].temps;
+		patineur1 = liste_equipes->equipes[i].personnes[1].liste_temps[liste_equipes->tour_actuel - 1].temps;
 		float patineur2 = 0.;
-		patineur2 = liste_equipes->equipes[i].personnes[2].liste_temps[tour_actuel - 1].temps;
+		patineur2 = liste_equipes->equipes[i].personnes[2].liste_temps[liste_equipes->tour_actuel - 1].temps;
 
-		if ((patineur0 >= patineur1) && (patineur0 >= patineur2)) {
+		if ((patineur0 >= patineur1)&&(patineur0 >= patineur2)) {
 			temps_equipe[i] = patineur0;
 		}
 		else if (patineur1 >= patineur2) {
@@ -166,7 +167,7 @@ void afficher_temps_equipes(Course* liste_equipes) {
 }
 
 void definir_parcours(Course* liste_equipes) {
-	scanf("%u", &tour_actuel);
+	scanf("%u", );
 }
 
 void detection_fin_poursuite(Course* liste_equipes) {
