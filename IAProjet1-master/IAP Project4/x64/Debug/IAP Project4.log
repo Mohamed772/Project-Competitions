@@ -1,4 +1,7 @@
 ﻿  sprint4.c
-D:\IUT\Projet IAP1\IAProjet1\IAProjet1-master\IAP Project4\sprint4.c(68,20): warning C4018:  '<' : incompatibilité signed/unsigned
-D:\IUT\Projet IAP1\IAProjet1\IAProjet1-master\IAP Project4\sprint4.c(144,20): warning C4018:  '<' : incompatibilité signed/unsigned
+D:\IUT\Projet IAP1\IAProjet1\IAProjet1-master\IAP Project4\sprint4.c(98,64): warning C4013:  'compare_tour_equipe' non défini(e) ; extern retournant int pris par défaut
+D:\IUT\Projet IAP1\IAProjet1\IAProjet1-master\IAP Project4\sprint4.c(100,31): warning C4013:  'compare_temps_joueurs' non défini(e) ; extern retournant int pris par défaut
+D:\IUT\Projet IAP1\IAProjet1\IAProjet1-master\IAP Project4\sprint4.c(100,79): warning C4244:  '=' : conversion de 'int' en 'float', perte possible de données
+D:\IUT\Projet IAP1\IAProjet1\IAProjet1-master\IAP Project4\sprint4.c(124,49): warning C4142:  'compare_tour_equipe' : redéfinition bénigne du type
+D:\IUT\Projet IAP1\IAProjet1\IAProjet1-master\IAP Project4\sprint4.c(132,62): warning C4142:  'compare_temps_joueurs' : redéfinition bénigne du type
   IAP Project4.vcxproj -> D:\IUT\Projet IAP1\IAProjet1\IAProjet1-master\IAP Project1\x64\Debug\IAP Project4.exe

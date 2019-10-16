@@ -1,9 +1,11 @@
+definir_parcours 2
 inscrire_equipe Canada Blondin Weidemann Morrison
 inscrire_equipe Japon Takagi Sato Takagu
 inscrire_equipe France Pierron Huot Monvoisin
 inscrire_equipe Italie Lollobrigida Mascitto Valcepina
 enregistrer_temps 101 1 53.1
 enregistrer_temps 102 1 53.2
+enregistrer_temps 102 2 54.2
 enregistrer_temps 104 1 53.3
 enregistrer_temps 105 1 53.7
 enregistrer_temps 106 1 53.9
