@@ -1,7 +1,2 @@
 ﻿  sprint4.c
-D:\IUT\Projet IAP1\IAProjet1\IAProjet1-master\IAP Project4\sprint4.c(99,64): warning C4013:  'compare_tour_equipe' non défini(e) ; extern retournant int pris par défaut
-D:\IUT\Projet IAP1\IAProjet1\IAProjet1-master\IAP Project4\sprint4.c(100,93): warning C4013:  'compare_temps_joueurs' non défini(e) ; extern retournant int pris par défaut
-D:\IUT\Projet IAP1\IAProjet1\IAProjet1-master\IAP Project4\sprint4.c(100,141): warning C4244:  '=' : conversion de 'int' en 'float', perte possible de données
-D:\IUT\Projet IAP1\IAProjet1\IAProjet1-master\IAP Project4\sprint4.c(123,49): warning C4142:  'compare_tour_equipe' : redéfinition bénigne du type
-D:\IUT\Projet IAP1\IAProjet1\IAProjet1-master\IAP Project4\sprint4.c(138,62): warning C4142:  'compare_temps_joueurs' : redéfinition bénigne du type
-  IAP Project4.vcxproj -> D:\IUT\Projet IAP1\IAProjet1\IAProjet1-master\IAP Project1\x64\Debug\IAP Project4.exe
+  IAP Project4.vcxproj -> C:\Users\raphc\Documents\GitHub\IAProjet1\IAProjet1-master\IAP Project1\x64\Debug\IAP Project4.exe

@@ -35,6 +35,8 @@ typedef struct {
 } Course; //compétition
 
 void detection_fin_parcours(Course* liste_equipes);
+unsigned int compare_tour_equipe(Equipe equipe);
+float compare_temps_joueurs(Equipe equipe, int tour_actuel);
 
 
 
@@ -97,7 +99,7 @@ void enregistrement_temps(Course* liste_equipes) {
 	else printf("Heu ca fais pas un peu beaucoup la non ?");
 
 	liste_equipes->equipes[num_equipe].tours = compare_tour_equipe(liste_equipes->equipes[num_equipe]);
-	liste_equipes->equipes[num_equipe].liste_temps[num_tours - 1].temps = compare_temps_joueurs(&liste_equipes->equipes[num_equipe], num_tours);
+	liste_equipes->equipes[num_equipe].liste_temps[num_tours - 1].temps = compare_temps_joueurs(liste_equipes->equipes[num_equipe], num_tours);
 	detection_fin_parcours(liste_equipes);
 }
 
@@ -135,16 +137,16 @@ unsigned int compare_tour_equipe(Equipe equipe) {
 		return c;
 }
 
-float compare_temps_joueurs(Equipe* equipe, int tour_actuel) {
+float compare_temps_joueurs(Equipe equipe, int tour_actuel) {
 	tour_actuel--;
-	if ((equipe->personnes[0].liste_temps[tour_actuel].temps >= equipe->personnes[1].liste_temps[tour_actuel].temps) 
-		&& (equipe->personnes[0].liste_temps[tour_actuel].temps >= equipe->personnes[2].liste_temps[tour_actuel].temps)) {
-		return equipe->personnes[0].liste_temps[tour_actuel].temps;
+	if ((equipe.personnes[0].liste_temps[tour_actuel].temps >= equipe.personnes[1].liste_temps[tour_actuel].temps) 
+		&& (equipe.personnes[0].liste_temps[tour_actuel].temps >= equipe.personnes[2].liste_temps[tour_actuel].temps)) {
+		return equipe.personnes[0].liste_temps[tour_actuel].temps;
 	}
-	else if (equipe->personnes[1].liste_temps[tour_actuel].temps >= equipe->personnes[2].liste_temps[tour_actuel].temps) {
-		return equipe->personnes[1].liste_temps[tour_actuel].temps;
+	else if (equipe.personnes[1].liste_temps[tour_actuel].temps >= equipe.personnes[2].liste_temps[tour_actuel].temps) {
+		return equipe.personnes[1].liste_temps[tour_actuel].temps;
 	}
-	else return equipe->personnes[2].liste_temps[tour_actuel].temps;
+	else return equipe.personnes[2].liste_temps[tour_actuel].temps;
 	
 }
 
@@ -160,8 +162,8 @@ void affichage_temps_equipes(Course* liste_equipes, unsigned int nb_equipes) {
 		if (equipe1 >= equipe2) { tour_actuel = equipe2; }
 		else tour_actuel = equipe1;
 
-		liste_equipes->equipes[i].liste_temps[tour_actuel-1].temps = compare_temps_joueurs(&liste_equipes->equipes[i], tour_actuel);
-		liste_equipes->equipes[i + 1].liste_temps[tour_actuel-1].temps = compare_temps_joueurs(&liste_equipes->equipes[i + 1], tour_actuel);
+		liste_equipes->equipes[i].liste_temps[tour_actuel-1].temps = compare_temps_joueurs(liste_equipes->equipes[i], tour_actuel);
+		liste_equipes->equipes[i + 1].liste_temps[tour_actuel-1].temps = compare_temps_joueurs(liste_equipes->equipes[i + 1], tour_actuel);
 
 		printf("%s %.1f\n", liste_equipes->equipes[i].pays, liste_equipes->equipes[i].liste_temps[tour_actuel-1].temps);
 		printf("%s %.1f\n", liste_equipes->equipes[i+1].pays, liste_equipes->equipes[i+1].liste_temps[tour_actuel-1].temps);
