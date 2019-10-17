@@ -32,7 +32,7 @@ typedef struct {
 	Equipe equipes[MAX_EQUIPE];
 	unsigned int compteur_nb_equipes;
 	unsigned int tour_max;
-} Course; //comp�tition
+} Course; //competition
 
 void detection_fin_parcours(Course* liste_equipes);
 unsigned int compare_tour_equipe(Equipe equipe);
@@ -60,7 +60,7 @@ void inscrire_equipe(Equipe* e, Course* liste_equipes) {
 		liste_equipes->compteur_nb_equipes+=1;
 	}
 	else
-		printf("Vous avez d�j� atteint le nombre d'�quipe maximale");
+		printf("Vous avez deja atteint le nombre d'equipe maximale");
 }
 
 void afficher_equipes(const Course* liste_equipes) {

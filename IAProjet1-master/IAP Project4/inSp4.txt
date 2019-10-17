@@ -1,4 +1,5 @@
 definir_parcours 2
+definir_nombre_epreuve 2
 inscrire_equipe Canada Blondin Weidemann Morrison
 inscrire_equipe Japon Takagi Sato Takagu
 inscrire_equipe France Pierron Huot Monvoisin
