@@ -50,6 +50,7 @@ void inscrire_equipe(Equipe* e, Course* liste_equipes) {
 			scanf("%s", &mot);
 			strcpy(e->personnes[i].nom, mot);
 			e->personnes[i].num_dossard = dos++;
+			e->personnes[i].tours = 0;
 			printf("inscription dossard %d\n", e->personnes[i].num_dossard);
 		}
 
@@ -96,9 +97,7 @@ void enregistrement_temps(Course* liste_equipes) {
 	else printf("Heu ca fais pas un peu beaucoup la non ?");
 
 	liste_equipes->equipes[num_equipe].tours = compare_tour_equipe(liste_equipes->equipes[num_equipe]);
-	liste_equipes->equipes[num_equipe].liste_temps[num_tours - 1].temps = 0;
-	temps = compare_temps_joueurs(&liste_equipes->equipes[num_equipe], num_tours);
-	liste_equipes->equipes[num_equipe].liste_temps[num_tours - 1].temps = temps;
+	liste_equipes->equipes[num_equipe].liste_temps[num_tours - 1].temps = compare_temps_joueurs(&liste_equipes->equipes[num_equipe], num_tours);
 	detection_fin_parcours(liste_equipes);
 }
 
@@ -126,9 +125,16 @@ unsigned int compare_tour_equipe(Equipe equipe) {
 	unsigned int b = 0; b = equipe.personnes[1].tours;
 	unsigned int c = 0; c = equipe.personnes[2].tours;
 
-	return ((a <= b) && (a <= c)) ? a : b; 
-	return c;
+	if ((a <= b) && (a <= c)) {
+		return a;
+	}
+	else if (b <= c) {
+		return b;
+	}
+	else
+		return c;
 }
+
 float compare_temps_joueurs(Equipe* equipe, int tour_actuel) {
 	tour_actuel--;
 	if ((equipe->personnes[0].liste_temps[tour_actuel].temps >= equipe->personnes[1].liste_temps[tour_actuel].temps) 
@@ -159,7 +165,6 @@ void affichage_temps_equipes(Course* liste_equipes, unsigned int nb_equipes) {
 
 		printf("%s %.1f\n", liste_equipes->equipes[i].pays, liste_equipes->equipes[i].liste_temps[tour_actuel-1].temps);
 		printf("%s %.1f\n", liste_equipes->equipes[i+1].pays, liste_equipes->equipes[i+1].liste_temps[tour_actuel-1].temps);
-
 	}
 }
 
