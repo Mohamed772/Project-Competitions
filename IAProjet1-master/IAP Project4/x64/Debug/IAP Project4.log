@@ -1,4 +1,2 @@
 ﻿  sprint4.c
-D:\IUT\Projet IAP1\IAProjet1\IAProjet1-master\IAP Project4\sprint4.c(100,64): warning C4013:  'compare_tour_equipe' non défini(e) ; extern retournant int pris par défaut
-D:\IUT\Projet IAP1\IAProjet1\IAProjet1-master\IAP Project4\sprint4.c(124,49): warning C4142:  'compare_tour_equipe' : redéfinition bénigne du type
-  IAP Project4.vcxproj -> D:\IUT\Projet IAP1\IAProjet1\IAProjet1-master\IAP Project1\x64\Debug\IAP Project4.exe
+  IAP Project4.vcxproj -> C:\Users\raphc\Documents\GitHub\IAProjet1\IAProjet1-master\IAP Project1\x64\Debug\IAP Project4.exe
