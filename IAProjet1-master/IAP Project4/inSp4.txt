@@ -5,7 +5,6 @@ inscrire_equipe France Pierron Huot Monvoisin
 inscrire_equipe Italie Lollobrigida Mascitto Valcepina
 enregistrer_temps 101 1 53.1
 enregistrer_temps 102 1 53.2
-enregistrer_temps 102 2 54.2
 enregistrer_temps 104 1 53.3
 enregistrer_temps 105 1 53.7
 enregistrer_temps 106 1 53.9
@@ -14,7 +13,7 @@ enregistrer_temps 105 2 100.6
 enregistrer_temps 106 2 101.7
 enregistrer_temps 104 2 102.3
 enregistrer_temps 101 2 102.5
-enregistrer_temps 103 2 102.8
+enregistrer_temps 102 2 102.8
 enregistrer_temps 103 2 103.1
 enregistrer_temps 111 1 50.9
 enregistrer_temps 108 1 52.1

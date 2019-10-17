@@ -1,0 +1,9 @@
+inscription dossard 101
+inscription dossard 102
+inscription dossard 103
+inscription dossard 104
+inscription dossard 105
+inscription dossard 106
+Detection_fin_parcours
+Canada -653278400.0
+Japon -653278080.0

@@ -35,6 +35,7 @@ typedef struct {
 } Course; //compétition
 
 void detection_fin_parcours(Course* liste_equipes);
+float compare_temps_joueurs(Equipe* equipe, int tour_actuel);
 
 
 
@@ -148,8 +149,8 @@ float compare_temps_joueurs(Equipe* equipe, int tour_actuel) {
 	
 }
 
-void affichage_temps_equipes(Course* liste_equipes, unsigned int nb_equipes) {
-	for (unsigned int i = 0; i < nb_equipes; i+=2 ){
+void affichage_temps_equipes(Course* liste_equipes) {
+	for (unsigned int i = 0; i < liste_equipes->compteur_nb_equipes; i+=2 ){
 		int tour_actuel = 0;
 		int equipe1 = compare_tour_equipe(liste_equipes->equipes[i]),
 			equipe2 = compare_tour_equipe(liste_equipes->equipes[i+1]);
@@ -170,9 +171,9 @@ void affichage_temps_equipes(Course* liste_equipes, unsigned int nb_equipes) {
 
 void detection_fin_parcours(Course* liste_equipes) {
 	unsigned int tour_max = liste_equipes->tour_max;
-	for (unsigned int i = 0; i < liste_equipes->compteur_nb_equipes; i += 2) {
+	for (unsigned int i = 0; i < liste_equipes->compteur_nb_equipes; i+=2) {
 		if ((liste_equipes->equipes[i].tours  == tour_max) && (liste_equipes->equipes[i + 1].tours == tour_max)) {
-			printf("Detection_fin_parcours\n");
+			printf("detection_fin_poursuite\n");
 			printf("%s %.1f\n", liste_equipes->equipes[i].pays, liste_equipes->equipes[i].liste_temps[tour_max - 1].temps);
 			printf("%s %.1f\n", liste_equipes->equipes[i + 1].pays, liste_equipes->equipes[i + 1].liste_temps[tour_max - 1].temps);
 		}
@@ -201,8 +202,7 @@ int main() {
 			affichage_temps(&liste_equipes);
 		}
 		if (strcmp(mot, "afficher_temps_equipes") == 0) {
-			unsigned int nb_equipes = liste_equipes.compteur_nb_equipes;
-			affichage_temps_equipes(&liste_equipes, nb_equipes);
+			affichage_temps_equipes(&liste_equipes);
 		}
 		if (strcmp(mot, "definir_parcours") == 0) {
 			unsigned int parcours;
