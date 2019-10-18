@@ -45,6 +45,7 @@ float compare_temps_joueurs(Equipe equipe, int tour_actuel);
 void affichage_temps_equipes(Course* liste_equipes);
 void detection_fin_parcours(Course* liste_equipes);
 void detection_fin_competition(Course* liste_equipes);
+void trier_equipes(Course* liste_equipes);
 
 void inscrire_equipe(Equipe* e, Course* liste_equipes) {
 	char mot[lgMot + 1];
@@ -203,6 +204,7 @@ void detection_fin_parcours(Course* liste_equipes) {
 void detection_fin_competition(Course* liste_equipes){
 	unsigned int courses_max = liste_equipes->epreuves_max;
 	unsigned int tour_max = liste_equipes->tour_max;
+	trier_equipes(liste_equipes);
 	printf("detection_fin_competition\n");
 
 	for (unsigned int i = 0; i < (courses_max*NB_EQUIPE_EPREUVE); i++){
@@ -210,9 +212,22 @@ void detection_fin_competition(Course* liste_equipes){
 	}
 }
 
-void trier_equipes(){
-
-
+void trier_equipes(Course* liste_equipes){
+	unsigned int n = liste_equipes->compteur_nb_equipes;
+	Equipe stockage;
+	int j;
+	unsigned int tour_max = liste_equipes->tour_max - 1;
+	for (int i = 1; i < n; i++)
+	{
+		stockage = liste_equipes->equipes[i];
+		j = i;
+		while (j > 0 && (liste_equipes->equipes[j-1].liste_temps[tour_max].temps > stockage.liste_temps[tour_max].temps))
+		{
+			liste_equipes->equipes[j] = liste_equipes->equipes[j - 1];
+			j--;
+		}
+		liste_equipes->equipes[j] = stockage;
+	}
 }
 
 
