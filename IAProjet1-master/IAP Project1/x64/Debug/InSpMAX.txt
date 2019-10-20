@@ -1,0 +1,2007 @@
+definir_parcours 10
+
+definir_nombre_epreuves 16
+
+inscrire_equipe T0 P01 P02 P03
+
+afficher_equipes
+
+inscrire_equipe T1 P11 P12 P13
+
+inscrire_equipe T2 P21 P22 P23
+
+inscrire_equipe T3 P31 P32 P33
+
+inscrire_equipe T4 P41 P42 P43
+
+inscrire_equipe T5 P51 P52 P53
+
+inscrire_equipe T6 P61 P62 P63
+
+inscrire_equipe T7 P71 P72 P73
+
+inscrire_equipe T8 P81 P82 P83
+
+inscrire_equipe T9 P91 P92 P93
+
+inscrire_equipe T10 P101 P102 P103
+
+afficher_equipes
+
+inscrire_equipe T11 P111 P112 P113
+
+inscrire_equipe T12 P121 P122 P123
+
+inscrire_equipe T13 P131 P132 P133
+
+inscrire_equipe T14 P141 P142 P143
+
+inscrire_equipe T15 P151 P152 P153
+
+inscrire_equipe T16 P161 P162 P163
+
+inscrire_equipe T17 P171 P172 P173
+
+inscrire_equipe T18 P181 P182 P183
+
+inscrire_equipe T19 P191 P192 P193
+
+inscrire_equipe T20 P201 P202 P203
+
+inscrire_equipe T21 P211 P212 P213
+
+inscrire_equipe T22 P221 P222 P223
+
+inscrire_equipe T23 P231 P232 P233
+
+inscrire_equipe T24 P241 P242 P243
+
+inscrire_equipe T25 P251 P252 P253
+
+inscrire_equipe T26 P261 P262 P263
+
+inscrire_equipe T27 P271 P272 P273
+
+inscrire_equipe T28 P281 P282 P283
+
+inscrire_equipe T29 P291 P292 P293
+
+inscrire_equipe T30 P301 P302 P303
+
+inscrire_equipe T31 P311 P312 P313
+
+enregistrer_temps 196 1 55.1
+
+enregistrer_temps 195 1 54.1
+
+enregistrer_temps 194 1 53.1
+
+enregistrer_temps 193 1 52.1
+
+enregistrer_temps 192 1 51.1
+
+enregistrer_temps 191 1 50.1
+
+enregistrer_temps 196 2 112.2
+
+enregistrer_temps 195 2 110.2
+
+enregistrer_temps 194 2 108.2
+
+afficher_temps_equipes 2
+
+enregistrer_temps 193 2 106.2
+
+enregistrer_temps 192 2 104.2
+
+enregistrer_temps 191 2 102.2
+
+enregistrer_temps 196 3 171.3
+
+enregistrer_temps 195 3 168.3
+
+enregistrer_temps 194 3 165.3
+
+enregistrer_temps 193 3 162.3
+
+enregistrer_temps 192 3 159.3
+
+enregistrer_temps 191 3 156.3
+
+enregistrer_temps 196 4 232.4
+
+enregistrer_temps 195 4 228.4
+
+enregistrer_temps 194 4 224.4
+
+enregistrer_temps 193 4 220.4
+
+enregistrer_temps 192 4 216.4
+
+enregistrer_temps 191 4 212.4
+
+enregistrer_temps 196 5 295.5
+
+enregistrer_temps 195 5 290.5
+
+enregistrer_temps 194 5 285.5
+
+enregistrer_temps 193 5 280.5
+
+enregistrer_temps 192 5 275.5
+
+enregistrer_temps 191 5 270.5
+
+enregistrer_temps 196 6 360.6
+
+enregistrer_temps 195 6 354.6
+
+enregistrer_temps 194 6 348.6
+
+enregistrer_temps 193 6 342.6
+
+enregistrer_temps 192 6 336.6
+
+enregistrer_temps 191 6 330.6
+
+enregistrer_temps 196 7 427.7
+
+enregistrer_temps 195 7 420.7
+
+enregistrer_temps 194 7 413.7
+
+enregistrer_temps 193 7 406.7
+
+enregistrer_temps 192 7 399.7
+
+enregistrer_temps 191 7 392.7
+
+enregistrer_temps 196 8 496.8
+
+enregistrer_temps 195 8 488.8
+
+enregistrer_temps 194 8 480.8
+
+enregistrer_temps 193 8 472.8
+
+enregistrer_temps 192 8 464.8
+
+enregistrer_temps 191 8 456.8
+
+enregistrer_temps 196 9 567.9
+
+enregistrer_temps 195 9 558.9
+
+enregistrer_temps 194 9 549.9
+
+enregistrer_temps 193 9 540.9
+
+enregistrer_temps 192 9 531.9
+
+enregistrer_temps 191 9 522.9
+
+enregistrer_temps 196 10 641.0
+
+enregistrer_temps 195 10 631.0
+
+enregistrer_temps 194 10 621.0
+
+enregistrer_temps 193 10 611.0
+
+enregistrer_temps 192 10 601.0
+
+enregistrer_temps 191 10 591.0
+
+enregistrer_temps 190 1 65.1
+
+enregistrer_temps 189 1 64.1
+
+enregistrer_temps 188 1 63.1
+
+enregistrer_temps 187 1 62.1
+
+enregistrer_temps 186 1 61.1
+
+enregistrer_temps 185 1 60.1
+
+enregistrer_temps 190 2 132.2
+
+enregistrer_temps 189 2 130.2
+
+enregistrer_temps 188 2 128.2
+
+enregistrer_temps 187 2 126.2
+
+enregistrer_temps 186 2 124.2
+
+enregistrer_temps 185 2 122.2
+
+enregistrer_temps 190 3 201.3
+
+enregistrer_temps 189 3 198.3
+
+enregistrer_temps 188 3 195.3
+
+enregistrer_temps 187 3 192.3
+
+enregistrer_temps 186 3 189.3
+
+enregistrer_temps 185 3 186.3
+
+enregistrer_temps 190 4 272.4
+
+enregistrer_temps 189 4 268.4
+
+enregistrer_temps 188 4 264.4
+
+enregistrer_temps 187 4 260.4
+
+enregistrer_temps 186 4 256.4
+
+enregistrer_temps 185 4 252.4
+
+enregistrer_temps 190 5 345.5
+
+enregistrer_temps 189 5 340.5
+
+enregistrer_temps 188 5 335.5
+
+enregistrer_temps 187 5 330.5
+
+enregistrer_temps 186 5 325.5
+
+enregistrer_temps 185 5 320.5
+
+enregistrer_temps 190 6 420.6
+
+enregistrer_temps 189 6 414.6
+
+enregistrer_temps 188 6 408.6
+
+enregistrer_temps 187 6 402.6
+
+enregistrer_temps 186 6 396.6
+
+enregistrer_temps 185 6 390.6
+
+enregistrer_temps 190 7 497.7
+
+enregistrer_temps 189 7 490.7
+
+enregistrer_temps 188 7 483.7
+
+enregistrer_temps 187 7 476.7
+
+enregistrer_temps 186 7 469.7
+
+enregistrer_temps 185 7 462.7
+
+enregistrer_temps 190 8 576.8
+
+enregistrer_temps 189 8 568.8
+
+enregistrer_temps 188 8 560.8
+
+afficher_equipes
+
+enregistrer_temps 187 8 552.8
+
+enregistrer_temps 186 8 544.8
+
+enregistrer_temps 185 8 536.8
+
+enregistrer_temps 190 9 657.9
+
+enregistrer_temps 189 9 648.9
+
+enregistrer_temps 188 9 639.9
+
+enregistrer_temps 187 9 630.9
+
+enregistrer_temps 186 9 621.9
+
+enregistrer_temps 185 9 612.9
+
+enregistrer_temps 190 10 741.0
+
+enregistrer_temps 189 10 731.0
+
+enregistrer_temps 188 10 721.0
+
+enregistrer_temps 187 10 711.0
+
+enregistrer_temps 186 10 701.0
+
+enregistrer_temps 185 10 691.0
+
+enregistrer_temps 184 1 75.1
+
+enregistrer_temps 183 1 74.1
+
+enregistrer_temps 182 1 73.1
+
+enregistrer_temps 181 1 72.1
+
+enregistrer_temps 180 1 71.1
+
+enregistrer_temps 179 1 70.1
+
+enregistrer_temps 184 2 152.2
+
+enregistrer_temps 183 2 150.2
+
+enregistrer_temps 182 2 148.2
+
+enregistrer_temps 181 2 146.2
+
+enregistrer_temps 180 2 144.2
+
+enregistrer_temps 179 2 142.2
+
+enregistrer_temps 184 3 231.3
+
+enregistrer_temps 183 3 228.3
+
+enregistrer_temps 182 3 225.3
+
+enregistrer_temps 181 3 222.3
+
+enregistrer_temps 180 3 219.3
+
+enregistrer_temps 179 3 216.3
+
+enregistrer_temps 184 4 312.4
+
+enregistrer_temps 183 4 308.4
+
+enregistrer_temps 182 4 304.4
+
+enregistrer_temps 181 4 300.4
+
+enregistrer_temps 180 4 296.4
+
+enregistrer_temps 179 4 292.4
+
+enregistrer_temps 184 5 395.5
+
+enregistrer_temps 183 5 390.5
+
+enregistrer_temps 182 5 385.5
+
+enregistrer_temps 181 5 380.5
+
+enregistrer_temps 180 5 375.5
+
+enregistrer_temps 179 5 370.5
+
+enregistrer_temps 184 6 480.6
+
+enregistrer_temps 183 6 474.6
+
+enregistrer_temps 182 6 468.6
+
+enregistrer_temps 181 6 462.6
+
+enregistrer_temps 180 6 456.6
+
+enregistrer_temps 179 6 450.6
+
+enregistrer_temps 184 7 567.7
+
+enregistrer_temps 183 7 560.7
+
+enregistrer_temps 182 7 553.7
+
+enregistrer_temps 181 7 546.7
+
+enregistrer_temps 180 7 539.7
+
+enregistrer_temps 179 7 532.7
+
+enregistrer_temps 184 8 656.8
+
+enregistrer_temps 183 8 648.8
+
+enregistrer_temps 182 8 640.8
+
+enregistrer_temps 181 8 632.8
+
+enregistrer_temps 180 8 624.8
+
+enregistrer_temps 179 8 616.8
+
+enregistrer_temps 184 9 747.9
+
+enregistrer_temps 183 9 738.9
+
+enregistrer_temps 182 9 729.9
+
+enregistrer_temps 181 9 720.9
+
+enregistrer_temps 180 9 711.9
+
+enregistrer_temps 179 9 702.9
+
+enregistrer_temps 184 10 841.0
+
+enregistrer_temps 183 10 831.0
+
+enregistrer_temps 182 10 821.0
+
+enregistrer_temps 181 10 811.0
+
+enregistrer_temps 180 10 801.0
+
+enregistrer_temps 179 10 791.0
+
+enregistrer_temps 178 1 85.1
+
+enregistrer_temps 177 1 84.1
+
+enregistrer_temps 176 1 83.1
+
+enregistrer_temps 175 1 82.1
+
+enregistrer_temps 174 1 81.1
+
+enregistrer_temps 173 1 80.1
+
+enregistrer_temps 178 2 172.2
+
+enregistrer_temps 177 2 170.2
+
+enregistrer_temps 176 2 168.2
+
+enregistrer_temps 175 2 166.2
+
+enregistrer_temps 174 2 164.2
+
+enregistrer_temps 173 2 162.2
+
+enregistrer_temps 178 3 261.3
+
+enregistrer_temps 177 3 258.3
+
+enregistrer_temps 176 3 255.3
+
+enregistrer_temps 175 3 252.3
+
+enregistrer_temps 174 3 249.3
+
+enregistrer_temps 173 3 246.3
+
+enregistrer_temps 178 4 352.4
+
+enregistrer_temps 177 4 348.4
+
+enregistrer_temps 176 4 344.4
+
+enregistrer_temps 175 4 340.4
+
+enregistrer_temps 174 4 336.4
+
+enregistrer_temps 173 4 332.4
+
+enregistrer_temps 178 5 445.5
+
+enregistrer_temps 177 5 440.5
+
+enregistrer_temps 176 5 435.5
+
+enregistrer_temps 175 5 430.5
+
+enregistrer_temps 174 5 425.5
+
+enregistrer_temps 173 5 420.5
+
+enregistrer_temps 178 6 540.6
+
+enregistrer_temps 177 6 534.6
+
+enregistrer_temps 176 6 528.6
+
+enregistrer_temps 175 6 522.6
+
+enregistrer_temps 174 6 516.6
+
+enregistrer_temps 173 6 510.6
+
+enregistrer_temps 178 7 637.7
+
+enregistrer_temps 177 7 630.7
+
+enregistrer_temps 176 7 623.7
+
+enregistrer_temps 175 7 616.7
+
+enregistrer_temps 174 7 609.7
+
+afficher_temps 196
+
+afficher_temps 101
+
+enregistrer_temps 173 7 602.7
+
+enregistrer_temps 178 8 736.8
+
+enregistrer_temps 177 8 728.8
+
+enregistrer_temps 176 8 720.8
+
+enregistrer_temps 175 8 712.8
+
+enregistrer_temps 174 8 704.8
+
+enregistrer_temps 173 8 696.8
+
+enregistrer_temps 178 9 837.9
+
+enregistrer_temps 177 9 828.9
+
+enregistrer_temps 176 9 819.9
+
+enregistrer_temps 175 9 810.9
+
+enregistrer_temps 174 9 801.9
+
+enregistrer_temps 173 9 792.9
+
+enregistrer_temps 178 10 941.0
+
+enregistrer_temps 177 10 931.0
+
+enregistrer_temps 176 10 921.0
+
+enregistrer_temps 175 10 911.0
+
+enregistrer_temps 174 10 901.0
+
+enregistrer_temps 173 10 891.0
+
+enregistrer_temps 172 1 95.1
+
+enregistrer_temps 171 1 94.1
+
+enregistrer_temps 170 1 93.1
+
+enregistrer_temps 169 1 92.1
+
+enregistrer_temps 168 1 91.1
+
+enregistrer_temps 167 1 90.1
+
+enregistrer_temps 172 2 192.2
+
+enregistrer_temps 171 2 190.2
+
+enregistrer_temps 170 2 188.2
+
+enregistrer_temps 169 2 186.2
+
+enregistrer_temps 168 2 184.2
+
+enregistrer_temps 167 2 182.2
+
+enregistrer_temps 172 3 291.3
+
+enregistrer_temps 171 3 288.3
+
+enregistrer_temps 170 3 285.3
+
+enregistrer_temps 169 3 282.3
+
+enregistrer_temps 168 3 279.3
+
+enregistrer_temps 167 3 276.3
+
+enregistrer_temps 172 4 392.4
+
+enregistrer_temps 171 4 388.4
+
+enregistrer_temps 170 4 384.4
+
+enregistrer_temps 169 4 380.4
+
+enregistrer_temps 168 4 376.4
+
+enregistrer_temps 167 4 372.4
+
+enregistrer_temps 172 5 495.5
+
+enregistrer_temps 171 5 490.5
+
+enregistrer_temps 170 5 485.5
+
+enregistrer_temps 169 5 480.5
+
+enregistrer_temps 168 5 475.5
+
+enregistrer_temps 167 5 470.5
+
+enregistrer_temps 172 6 600.6
+
+enregistrer_temps 171 6 594.6
+
+enregistrer_temps 170 6 588.6
+
+enregistrer_temps 169 6 582.6
+
+enregistrer_temps 168 6 576.6
+
+enregistrer_temps 167 6 570.6
+
+enregistrer_temps 172 7 707.7
+
+enregistrer_temps 171 7 700.7
+
+enregistrer_temps 170 7 693.7
+
+enregistrer_temps 169 7 686.7
+
+enregistrer_temps 168 7 679.7
+
+enregistrer_temps 167 7 672.7
+
+enregistrer_temps 172 8 816.8
+
+enregistrer_temps 171 8 808.8
+
+enregistrer_temps 170 8 800.8
+
+enregistrer_temps 169 8 792.8
+
+enregistrer_temps 168 8 784.8
+
+enregistrer_temps 167 8 776.8
+
+enregistrer_temps 172 9 927.9
+
+enregistrer_temps 171 9 918.9
+
+enregistrer_temps 170 9 909.9
+
+enregistrer_temps 169 9 900.9
+
+enregistrer_temps 168 9 891.9
+
+enregistrer_temps 167 9 882.9
+
+enregistrer_temps 172 10 1041.0
+
+enregistrer_temps 171 10 1031.0
+
+enregistrer_temps 170 10 1021.0
+
+enregistrer_temps 169 10 1011.0
+
+enregistrer_temps 168 10 1001.0
+
+enregistrer_temps 167 10 991.0
+
+enregistrer_temps 166 1 105.1
+
+enregistrer_temps 165 1 104.1
+
+enregistrer_temps 164 1 103.1
+
+enregistrer_temps 163 1 102.1
+
+enregistrer_temps 162 1 101.1
+
+enregistrer_temps 161 1 100.1
+
+enregistrer_temps 166 2 212.2
+
+enregistrer_temps 165 2 210.2
+
+enregistrer_temps 164 2 208.2
+
+enregistrer_temps 163 2 206.2
+
+enregistrer_temps 162 2 204.2
+
+enregistrer_temps 161 2 202.2
+
+enregistrer_temps 166 3 321.3
+
+enregistrer_temps 165 3 318.3
+
+enregistrer_temps 164 3 315.3
+
+enregistrer_temps 163 3 312.3
+
+enregistrer_temps 162 3 309.3
+
+enregistrer_temps 161 3 306.3
+
+enregistrer_temps 166 4 432.4
+
+enregistrer_temps 165 4 428.4
+
+enregistrer_temps 164 4 424.4
+
+enregistrer_temps 163 4 420.4
+
+enregistrer_temps 162 4 416.4
+
+enregistrer_temps 161 4 412.4
+
+enregistrer_temps 166 5 545.5
+
+enregistrer_temps 165 5 540.5
+
+enregistrer_temps 164 5 535.5
+
+enregistrer_temps 163 5 530.5
+
+enregistrer_temps 162 5 525.5
+
+enregistrer_temps 161 5 520.5
+
+enregistrer_temps 166 6 660.6
+
+enregistrer_temps 165 6 654.6
+
+enregistrer_temps 164 6 648.6
+
+enregistrer_temps 163 6 642.6
+
+enregistrer_temps 162 6 636.6
+
+enregistrer_temps 161 6 630.6
+
+enregistrer_temps 166 7 777.7
+
+enregistrer_temps 165 7 770.7
+
+enregistrer_temps 164 7 763.7
+
+enregistrer_temps 163 7 756.7
+
+enregistrer_temps 162 7 749.7
+
+enregistrer_temps 161 7 742.7
+
+enregistrer_temps 166 8 896.8
+
+enregistrer_temps 165 8 888.8
+
+enregistrer_temps 164 8 880.8
+
+enregistrer_temps 163 8 872.8
+
+enregistrer_temps 162 8 864.8
+
+enregistrer_temps 161 8 856.8
+
+enregistrer_temps 166 9 1017.9
+
+enregistrer_temps 165 9 1008.9
+
+enregistrer_temps 164 9 999.9
+
+enregistrer_temps 163 9 990.9
+
+enregistrer_temps 162 9 981.9
+
+enregistrer_temps 161 9 972.9
+
+enregistrer_temps 166 10 1141.0
+
+enregistrer_temps 165 10 1131.0
+
+enregistrer_temps 164 10 1121.0
+
+enregistrer_temps 163 10 1111.0
+
+enregistrer_temps 162 10 1101.0
+
+enregistrer_temps 161 10 1091.0
+
+enregistrer_temps 160 1 115.1
+
+enregistrer_temps 159 1 114.1
+
+enregistrer_temps 158 1 113.1
+
+enregistrer_temps 157 1 112.1
+
+enregistrer_temps 156 1 111.1
+
+enregistrer_temps 155 1 110.1
+
+enregistrer_temps 160 2 232.2
+
+enregistrer_temps 159 2 230.2
+
+enregistrer_temps 158 2 228.2
+
+enregistrer_temps 157 2 226.2
+
+enregistrer_temps 156 2 224.2
+
+enregistrer_temps 155 2 222.2
+
+enregistrer_temps 160 3 351.3
+
+enregistrer_temps 159 3 348.3
+
+enregistrer_temps 158 3 345.3
+
+enregistrer_temps 157 3 342.3
+
+enregistrer_temps 156 3 339.3
+
+enregistrer_temps 155 3 336.3
+
+enregistrer_temps 160 4 472.4
+
+enregistrer_temps 159 4 468.4
+
+enregistrer_temps 158 4 464.4
+
+enregistrer_temps 157 4 460.4
+
+enregistrer_temps 156 4 456.4
+
+enregistrer_temps 155 4 452.4
+
+enregistrer_temps 160 5 595.5
+
+enregistrer_temps 159 5 590.5
+
+enregistrer_temps 158 5 585.5
+
+enregistrer_temps 157 5 580.5
+
+enregistrer_temps 156 5 575.5
+
+enregistrer_temps 155 5 570.5
+
+enregistrer_temps 160 6 720.6
+
+enregistrer_temps 159 6 714.6
+
+enregistrer_temps 158 6 708.6
+
+enregistrer_temps 157 6 702.6
+
+enregistrer_temps 156 6 696.6
+
+enregistrer_temps 155 6 690.6
+
+enregistrer_temps 160 7 847.7
+
+enregistrer_temps 159 7 840.7
+
+enregistrer_temps 158 7 833.7
+
+enregistrer_temps 157 7 826.7
+
+enregistrer_temps 156 7 819.7
+
+enregistrer_temps 155 7 812.7
+
+enregistrer_temps 160 8 976.8
+
+enregistrer_temps 159 8 968.8
+
+enregistrer_temps 158 8 960.8
+
+enregistrer_temps 157 8 952.8
+
+enregistrer_temps 156 8 944.8
+
+enregistrer_temps 155 8 936.8
+
+enregistrer_temps 160 9 1107.9
+
+enregistrer_temps 159 9 1098.9
+
+enregistrer_temps 158 9 1089.9
+
+enregistrer_temps 157 9 1080.9
+
+enregistrer_temps 156 9 1071.9
+
+enregistrer_temps 155 9 1062.9
+
+enregistrer_temps 160 10 1241.0
+
+enregistrer_temps 159 10 1231.0
+
+enregistrer_temps 158 10 1221.0
+
+enregistrer_temps 157 10 1211.0
+
+enregistrer_temps 156 10 1201.0
+
+enregistrer_temps 155 10 1191.0
+
+enregistrer_temps 154 1 125.1
+
+enregistrer_temps 153 1 124.1
+
+enregistrer_temps 152 1 123.1
+
+enregistrer_temps 151 1 122.1
+
+enregistrer_temps 150 1 121.1
+
+enregistrer_temps 149 1 120.1
+
+enregistrer_temps 154 2 252.2
+
+enregistrer_temps 153 2 250.2
+
+enregistrer_temps 152 2 248.2
+
+enregistrer_temps 151 2 246.2
+
+enregistrer_temps 150 2 244.2
+
+enregistrer_temps 149 2 242.2
+
+enregistrer_temps 154 3 381.3
+
+enregistrer_temps 153 3 378.3
+
+enregistrer_temps 152 3 375.3
+
+enregistrer_temps 151 3 372.3
+
+enregistrer_temps 150 3 369.3
+
+enregistrer_temps 149 3 366.3
+
+enregistrer_temps 154 4 512.4
+
+enregistrer_temps 153 4 508.4
+
+enregistrer_temps 152 4 504.4
+
+enregistrer_temps 151 4 500.4
+
+enregistrer_temps 150 4 496.4
+
+enregistrer_temps 149 4 492.4
+
+enregistrer_temps 154 5 645.5
+
+enregistrer_temps 153 5 640.5
+
+enregistrer_temps 152 5 635.5
+
+enregistrer_temps 151 5 630.5
+
+enregistrer_temps 150 5 625.5
+
+enregistrer_temps 149 5 620.5
+
+enregistrer_temps 154 6 780.6
+
+enregistrer_temps 153 6 774.6
+
+enregistrer_temps 152 6 768.6
+
+enregistrer_temps 151 6 762.6
+
+enregistrer_temps 150 6 756.6
+
+enregistrer_temps 149 6 750.6
+
+enregistrer_temps 154 7 917.7
+
+enregistrer_temps 153 7 910.7
+
+enregistrer_temps 152 7 903.7
+
+enregistrer_temps 151 7 896.7
+
+enregistrer_temps 150 7 889.7
+
+enregistrer_temps 149 7 882.7
+
+enregistrer_temps 154 8 1056.8
+
+enregistrer_temps 153 8 1048.8
+
+enregistrer_temps 152 8 1040.8
+
+enregistrer_temps 151 8 1032.8
+
+enregistrer_temps 150 8 1024.8
+
+enregistrer_temps 149 8 1016.8
+
+enregistrer_temps 154 9 1197.9
+
+enregistrer_temps 153 9 1188.9
+
+enregistrer_temps 152 9 1179.9
+
+enregistrer_temps 151 9 1170.9
+
+enregistrer_temps 150 9 1161.9
+
+enregistrer_temps 149 9 1152.9
+
+enregistrer_temps 154 10 1341.0
+
+enregistrer_temps 153 10 1331.0
+
+enregistrer_temps 152 10 1321.0
+
+enregistrer_temps 151 10 1311.0
+
+enregistrer_temps 150 10 1301.0
+
+enregistrer_temps 149 10 1291.0
+
+enregistrer_temps 148 1 135.1
+
+enregistrer_temps 147 1 134.1
+
+enregistrer_temps 146 1 133.1
+
+enregistrer_temps 145 1 132.1
+
+enregistrer_temps 144 1 131.1
+
+enregistrer_temps 143 1 130.1
+
+enregistrer_temps 148 2 272.2
+
+enregistrer_temps 147 2 270.2
+
+enregistrer_temps 146 2 268.2
+
+enregistrer_temps 145 2 266.2
+
+enregistrer_temps 144 2 264.2
+
+enregistrer_temps 143 2 262.2
+
+enregistrer_temps 148 3 411.3
+
+enregistrer_temps 147 3 408.3
+
+enregistrer_temps 146 3 405.3
+
+enregistrer_temps 145 3 402.3
+
+enregistrer_temps 144 3 399.3
+
+enregistrer_temps 143 3 396.3
+
+enregistrer_temps 148 4 552.4
+
+enregistrer_temps 147 4 548.4
+
+enregistrer_temps 146 4 544.4
+
+enregistrer_temps 145 4 540.4
+
+enregistrer_temps 144 4 536.4
+
+enregistrer_temps 143 4 532.4
+
+enregistrer_temps 148 5 695.5
+
+enregistrer_temps 147 5 690.5
+
+enregistrer_temps 146 5 685.5
+
+enregistrer_temps 145 5 680.5
+
+enregistrer_temps 144 5 675.5
+
+enregistrer_temps 143 5 670.5
+
+enregistrer_temps 148 6 840.6
+
+enregistrer_temps 147 6 834.6
+
+enregistrer_temps 146 6 828.6
+
+enregistrer_temps 145 6 822.6
+
+enregistrer_temps 144 6 816.6
+
+enregistrer_temps 143 6 810.6
+
+enregistrer_temps 148 7 987.7
+
+enregistrer_temps 147 7 980.7
+
+enregistrer_temps 146 7 973.7
+
+enregistrer_temps 145 7 966.7
+
+enregistrer_temps 144 7 959.7
+
+enregistrer_temps 143 7 952.7
+
+enregistrer_temps 148 8 1136.8
+
+enregistrer_temps 147 8 1128.8
+
+enregistrer_temps 146 8 1120.8
+
+enregistrer_temps 145 8 1112.8
+
+enregistrer_temps 144 8 1104.8
+
+enregistrer_temps 143 8 1096.8
+
+enregistrer_temps 148 9 1287.9
+
+enregistrer_temps 147 9 1278.9
+
+enregistrer_temps 146 9 1269.9
+
+enregistrer_temps 145 9 1260.9
+
+enregistrer_temps 144 9 1251.9
+
+enregistrer_temps 143 9 1242.9
+
+enregistrer_temps 148 10 1441.0
+
+enregistrer_temps 147 10 1431.0
+
+enregistrer_temps 146 10 1421.0
+
+enregistrer_temps 145 10 1411.0
+
+enregistrer_temps 144 10 1401.0
+
+enregistrer_temps 143 10 1391.0
+
+enregistrer_temps 142 1 145.1
+
+enregistrer_temps 141 1 144.1
+
+enregistrer_temps 140 1 143.1
+
+enregistrer_temps 139 1 142.1
+
+enregistrer_temps 138 1 141.1
+
+enregistrer_temps 137 1 140.1
+
+enregistrer_temps 142 2 292.2
+
+enregistrer_temps 141 2 290.2
+
+enregistrer_temps 140 2 288.2
+
+enregistrer_temps 139 2 286.2
+
+enregistrer_temps 138 2 284.2
+
+enregistrer_temps 137 2 282.2
+
+enregistrer_temps 142 3 441.3
+
+enregistrer_temps 141 3 438.3
+
+enregistrer_temps 140 3 435.3
+
+enregistrer_temps 139 3 432.3
+
+enregistrer_temps 138 3 429.3
+
+enregistrer_temps 137 3 426.3
+
+enregistrer_temps 142 4 592.4
+
+enregistrer_temps 141 4 588.4
+
+enregistrer_temps 140 4 584.4
+
+enregistrer_temps 139 4 580.4
+
+enregistrer_temps 138 4 576.4
+
+enregistrer_temps 137 4 572.4
+
+enregistrer_temps 142 5 745.5
+
+enregistrer_temps 141 5 740.5
+
+enregistrer_temps 140 5 735.5
+
+enregistrer_temps 139 5 730.5
+
+enregistrer_temps 138 5 725.5
+
+enregistrer_temps 137 5 720.5
+
+enregistrer_temps 142 6 900.6
+
+enregistrer_temps 141 6 894.6
+
+enregistrer_temps 140 6 888.6
+
+enregistrer_temps 139 6 882.6
+
+enregistrer_temps 138 6 876.6
+
+enregistrer_temps 137 6 870.6
+
+enregistrer_temps 142 7 1057.7
+
+enregistrer_temps 141 7 1050.7
+
+enregistrer_temps 140 7 1043.7
+
+enregistrer_temps 139 7 1036.7
+
+enregistrer_temps 138 7 1029.7
+
+enregistrer_temps 137 7 1022.7
+
+enregistrer_temps 142 8 1216.8
+
+enregistrer_temps 141 8 1208.8
+
+enregistrer_temps 140 8 1200.8
+
+enregistrer_temps 139 8 1192.8
+
+enregistrer_temps 138 8 1184.8
+
+enregistrer_temps 137 8 1176.8
+
+enregistrer_temps 142 9 1377.9
+
+enregistrer_temps 141 9 1368.9
+
+enregistrer_temps 140 9 1359.9
+
+enregistrer_temps 139 9 1350.9
+
+enregistrer_temps 138 9 1341.9
+
+enregistrer_temps 137 9 1332.9
+
+enregistrer_temps 142 10 1541.0
+
+enregistrer_temps 141 10 1531.0
+
+enregistrer_temps 140 10 1521.0
+
+enregistrer_temps 139 10 1511.0
+
+enregistrer_temps 138 10 1501.0
+
+enregistrer_temps 137 10 1491.0
+
+enregistrer_temps 136 1 155.1
+
+enregistrer_temps 135 1 154.1
+
+enregistrer_temps 134 1 153.1
+
+enregistrer_temps 133 1 152.1
+
+enregistrer_temps 132 1 151.1
+
+enregistrer_temps 131 1 150.1
+
+enregistrer_temps 136 2 312.2
+
+enregistrer_temps 135 2 310.2
+
+enregistrer_temps 134 2 308.2
+
+enregistrer_temps 133 2 306.2
+
+enregistrer_temps 132 2 304.2
+
+enregistrer_temps 131 2 302.2
+
+enregistrer_temps 136 3 471.3
+
+enregistrer_temps 135 3 468.3
+
+enregistrer_temps 134 3 465.3
+
+enregistrer_temps 133 3 462.3
+
+enregistrer_temps 132 3 459.3
+
+enregistrer_temps 131 3 456.3
+
+enregistrer_temps 136 4 632.4
+
+enregistrer_temps 135 4 628.4
+
+enregistrer_temps 134 4 624.4
+
+enregistrer_temps 133 4 620.4
+
+enregistrer_temps 132 4 616.4
+
+enregistrer_temps 131 4 612.4
+
+enregistrer_temps 136 5 795.5
+
+enregistrer_temps 135 5 790.5
+
+enregistrer_temps 134 5 785.5
+
+enregistrer_temps 133 5 780.5
+
+enregistrer_temps 132 5 775.5
+
+enregistrer_temps 131 5 770.5
+
+enregistrer_temps 136 6 960.6
+
+enregistrer_temps 135 6 954.6
+
+enregistrer_temps 134 6 948.6
+
+enregistrer_temps 133 6 942.6
+
+enregistrer_temps 132 6 936.6
+
+enregistrer_temps 131 6 930.6
+
+enregistrer_temps 136 7 1127.7
+
+enregistrer_temps 135 7 1120.7
+
+enregistrer_temps 134 7 1113.7
+
+enregistrer_temps 133 7 1106.7
+
+enregistrer_temps 132 7 1099.7
+
+enregistrer_temps 131 7 1092.7
+
+enregistrer_temps 136 8 1296.8
+
+enregistrer_temps 135 8 1288.8
+
+enregistrer_temps 134 8 1280.8
+
+enregistrer_temps 133 8 1272.8
+
+enregistrer_temps 132 8 1264.8
+
+enregistrer_temps 131 8 1256.8
+
+enregistrer_temps 136 9 1467.9
+
+enregistrer_temps 135 9 1458.9
+
+enregistrer_temps 134 9 1449.9
+
+enregistrer_temps 133 9 1440.9
+
+enregistrer_temps 132 9 1431.9
+
+enregistrer_temps 131 9 1422.9
+
+enregistrer_temps 136 10 1641.0
+
+enregistrer_temps 135 10 1631.0
+
+enregistrer_temps 134 10 1621.0
+
+enregistrer_temps 133 10 1611.0
+
+enregistrer_temps 132 10 1601.0
+
+enregistrer_temps 131 10 1591.0
+
+enregistrer_temps 130 1 165.1
+
+enregistrer_temps 129 1 164.1
+
+enregistrer_temps 128 1 163.1
+
+enregistrer_temps 127 1 162.1
+
+enregistrer_temps 126 1 161.1
+
+enregistrer_temps 125 1 160.1
+
+enregistrer_temps 130 2 332.2
+
+enregistrer_temps 129 2 330.2
+
+enregistrer_temps 128 2 328.2
+
+enregistrer_temps 127 2 326.2
+
+enregistrer_temps 126 2 324.2
+
+enregistrer_temps 125 2 322.2
+
+enregistrer_temps 130 3 501.3
+
+enregistrer_temps 129 3 498.3
+
+enregistrer_temps 128 3 495.3
+
+enregistrer_temps 127 3 492.3
+
+enregistrer_temps 126 3 489.3
+
+enregistrer_temps 125 3 486.3
+
+enregistrer_temps 130 4 672.4
+
+enregistrer_temps 129 4 668.4
+
+enregistrer_temps 128 4 664.4
+
+enregistrer_temps 127 4 660.4
+
+enregistrer_temps 126 4 656.4
+
+enregistrer_temps 125 4 652.4
+
+enregistrer_temps 130 5 845.5
+
+enregistrer_temps 129 5 840.5
+
+enregistrer_temps 128 5 835.5
+
+enregistrer_temps 127 5 830.5
+
+enregistrer_temps 126 5 825.5
+
+enregistrer_temps 125 5 820.5
+
+enregistrer_temps 130 6 1020.6
+
+enregistrer_temps 129 6 1014.6
+
+enregistrer_temps 128 6 1008.6
+
+enregistrer_temps 127 6 1002.6
+
+enregistrer_temps 126 6 996.6
+
+enregistrer_temps 125 6 990.6
+
+enregistrer_temps 130 7 1197.7
+
+enregistrer_temps 129 7 1190.7
+
+enregistrer_temps 128 7 1183.7
+
+enregistrer_temps 127 7 1176.7
+
+enregistrer_temps 126 7 1169.7
+
+enregistrer_temps 125 7 1162.7
+
+enregistrer_temps 130 8 1376.8
+
+enregistrer_temps 129 8 1368.8
+
+enregistrer_temps 128 8 1360.8
+
+enregistrer_temps 127 8 1352.8
+
+enregistrer_temps 126 8 1344.8
+
+enregistrer_temps 125 8 1336.8
+
+enregistrer_temps 130 9 1557.9
+
+enregistrer_temps 129 9 1548.9
+
+enregistrer_temps 128 9 1539.9
+
+enregistrer_temps 127 9 1530.9
+
+enregistrer_temps 126 9 1521.9
+
+enregistrer_temps 125 9 1512.9
+
+enregistrer_temps 130 10 1741.0
+
+enregistrer_temps 129 10 1731.0
+
+enregistrer_temps 128 10 1721.0
+
+enregistrer_temps 127 10 1711.0
+
+enregistrer_temps 126 10 1701.0
+
+enregistrer_temps 125 10 1691.0
+
+enregistrer_temps 124 1 175.1
+
+enregistrer_temps 123 1 174.1
+
+enregistrer_temps 122 1 173.1
+
+enregistrer_temps 121 1 172.1
+
+enregistrer_temps 120 1 171.1
+
+enregistrer_temps 119 1 170.1
+
+enregistrer_temps 124 2 352.2
+
+enregistrer_temps 123 2 350.2
+
+enregistrer_temps 122 2 348.2
+
+enregistrer_temps 121 2 346.2
+
+enregistrer_temps 120 2 344.2
+
+enregistrer_temps 119 2 342.2
+
+enregistrer_temps 124 3 531.3
+
+enregistrer_temps 123 3 528.3
+
+enregistrer_temps 122 3 525.3
+
+enregistrer_temps 121 3 522.3
+
+enregistrer_temps 120 3 519.3
+
+enregistrer_temps 119 3 516.3
+
+enregistrer_temps 124 4 712.4
+
+enregistrer_temps 123 4 708.4
+
+enregistrer_temps 122 4 704.4
+
+enregistrer_temps 121 4 700.4
+
+enregistrer_temps 120 4 696.4
+
+enregistrer_temps 119 4 692.4
+
+enregistrer_temps 124 5 895.5
+
+enregistrer_temps 123 5 890.5
+
+enregistrer_temps 122 5 885.5
+
+enregistrer_temps 121 5 880.5
+
+enregistrer_temps 120 5 875.5
+
+enregistrer_temps 119 5 870.5
+
+enregistrer_temps 124 6 1080.6
+
+enregistrer_temps 123 6 1074.6
+
+enregistrer_temps 122 6 1068.6
+
+enregistrer_temps 121 6 1062.6
+
+enregistrer_temps 120 6 1056.6
+
+enregistrer_temps 119 6 1050.6
+
+enregistrer_temps 124 7 1267.7
+
+enregistrer_temps 123 7 1260.7
+
+enregistrer_temps 122 7 1253.7
+
+enregistrer_temps 121 7 1246.7
+
+enregistrer_temps 120 7 1239.7
+
+enregistrer_temps 119 7 1232.7
+
+enregistrer_temps 124 8 1456.8
+
+enregistrer_temps 123 8 1448.8
+
+enregistrer_temps 122 8 1440.8
+
+enregistrer_temps 121 8 1432.8
+
+enregistrer_temps 120 8 1424.8
+
+enregistrer_temps 119 8 1416.8
+
+enregistrer_temps 124 9 1647.9
+
+enregistrer_temps 123 9 1638.9
+
+enregistrer_temps 122 9 1629.9
+
+enregistrer_temps 121 9 1620.9
+
+enregistrer_temps 120 9 1611.9
+
+enregistrer_temps 119 9 1602.9
+
+enregistrer_temps 124 10 1841.0
+
+enregistrer_temps 123 10 1831.0
+
+enregistrer_temps 122 10 1821.0
+
+enregistrer_temps 121 10 1811.0
+
+enregistrer_temps 120 10 1801.0
+
+enregistrer_temps 119 10 1791.0
+
+enregistrer_temps 118 1 185.1
+
+enregistrer_temps 117 1 184.1
+
+enregistrer_temps 116 1 183.1
+
+enregistrer_temps 115 1 182.1
+
+enregistrer_temps 114 1 181.1
+
+enregistrer_temps 113 1 180.1
+
+enregistrer_temps 118 2 372.2
+
+enregistrer_temps 117 2 370.2
+
+enregistrer_temps 116 2 368.2
+
+enregistrer_temps 115 2 366.2
+
+enregistrer_temps 114 2 364.2
+
+enregistrer_temps 113 2 362.2
+
+enregistrer_temps 118 3 561.3
+
+enregistrer_temps 117 3 558.3
+
+enregistrer_temps 116 3 555.3
+
+enregistrer_temps 115 3 552.3
+
+enregistrer_temps 114 3 549.3
+
+enregistrer_temps 113 3 546.3
+
+enregistrer_temps 118 4 752.4
+
+enregistrer_temps 117 4 748.4
+
+enregistrer_temps 116 4 744.4
+
+enregistrer_temps 115 4 740.4
+
+enregistrer_temps 114 4 736.4
+
+enregistrer_temps 113 4 732.4
+
+enregistrer_temps 118 5 945.5
+
+enregistrer_temps 117 5 940.5
+
+enregistrer_temps 116 5 935.5
+
+enregistrer_temps 115 5 930.5
+
+enregistrer_temps 114 5 925.5
+
+enregistrer_temps 113 5 920.5
+
+enregistrer_temps 118 6 1140.6
+
+enregistrer_temps 117 6 1134.6
+
+enregistrer_temps 116 6 1128.6
+
+enregistrer_temps 115 6 1122.6
+
+enregistrer_temps 114 6 1116.6
+
+enregistrer_temps 113 6 1110.6
+
+enregistrer_temps 118 7 1337.7
+
+enregistrer_temps 117 7 1330.7
+
+enregistrer_temps 116 7 1323.7
+
+enregistrer_temps 115 7 1316.7
+
+enregistrer_temps 114 7 1309.7
+
+enregistrer_temps 113 7 1302.7
+
+enregistrer_temps 118 8 1536.8
+
+enregistrer_temps 117 8 1528.8
+
+enregistrer_temps 116 8 1520.8
+
+enregistrer_temps 115 8 1512.8
+
+enregistrer_temps 114 8 1504.8
+
+enregistrer_temps 113 8 1496.8
+
+enregistrer_temps 118 9 1737.9
+
+enregistrer_temps 117 9 1728.9
+
+enregistrer_temps 116 9 1719.9
+
+enregistrer_temps 115 9 1710.9
+
+enregistrer_temps 114 9 1701.9
+
+enregistrer_temps 113 9 1692.9
+
+enregistrer_temps 118 10 1941.0
+
+enregistrer_temps 117 10 1931.0
+
+enregistrer_temps 116 10 1921.0
+
+enregistrer_temps 115 10 1911.0
+
+enregistrer_temps 114 10 1901.0
+
+enregistrer_temps 113 10 1891.0
+
+enregistrer_temps 112 1 195.1
+
+enregistrer_temps 111 1 194.1
+
+enregistrer_temps 110 1 193.1
+
+enregistrer_temps 109 1 192.1
+
+enregistrer_temps 108 1 191.1
+
+enregistrer_temps 107 1 190.1
+
+enregistrer_temps 112 2 392.2
+
+enregistrer_temps 111 2 390.2
+
+enregistrer_temps 110 2 388.2
+
+enregistrer_temps 109 2 386.2
+
+enregistrer_temps 108 2 384.2
+
+enregistrer_temps 107 2 382.2
+
+enregistrer_temps 112 3 591.3
+
+enregistrer_temps 111 3 588.3
+
+enregistrer_temps 110 3 585.3
+
+enregistrer_temps 109 3 582.3
+
+enregistrer_temps 108 3 579.3
+
+enregistrer_temps 107 3 576.3
+
+enregistrer_temps 112 4 792.4
+
+enregistrer_temps 111 4 788.4
+
+enregistrer_temps 110 4 784.4
+
+enregistrer_temps 109 4 780.4
+
+enregistrer_temps 108 4 776.4
+
+enregistrer_temps 107 4 772.4
+
+enregistrer_temps 112 5 995.5
+
+enregistrer_temps 111 5 990.5
+
+enregistrer_temps 110 5 985.5
+
+enregistrer_temps 109 5 980.5
+
+enregistrer_temps 108 5 975.5
+
+enregistrer_temps 107 5 970.5
+
+enregistrer_temps 112 6 1200.6
+
+enregistrer_temps 111 6 1194.6
+
+enregistrer_temps 110 6 1188.6
+
+enregistrer_temps 109 6 1182.6
+
+enregistrer_temps 108 6 1176.6
+
+enregistrer_temps 107 6 1170.6
+
+enregistrer_temps 112 7 1407.7
+
+enregistrer_temps 111 7 1400.7
+
+enregistrer_temps 110 7 1393.7
+
+enregistrer_temps 109 7 1386.7
+
+enregistrer_temps 108 7 1379.7
+
+enregistrer_temps 107 7 1372.7
+
+enregistrer_temps 112 8 1616.8
+
+enregistrer_temps 111 8 1608.8
+
+enregistrer_temps 110 8 1600.8
+
+enregistrer_temps 109 8 1592.8
+
+enregistrer_temps 108 8 1584.8
+
+enregistrer_temps 107 8 1576.8
+
+enregistrer_temps 112 9 1827.9
+
+enregistrer_temps 111 9 1818.9
+
+enregistrer_temps 110 9 1809.9
+
+enregistrer_temps 109 9 1800.9
+
+enregistrer_temps 108 9 1791.9
+
+enregistrer_temps 107 9 1782.9
+
+enregistrer_temps 112 10 2041.0
+
+enregistrer_temps 111 10 2031.0
+
+enregistrer_temps 110 10 2021.0
+
+enregistrer_temps 109 10 2011.0
+
+enregistrer_temps 108 10 2001.0
+
+enregistrer_temps 107 10 1991.0
+
+enregistrer_temps 106 1 205.1
+
+enregistrer_temps 105 1 204.1
+
+enregistrer_temps 104 1 203.1
+
+enregistrer_temps 103 1 202.1
+
+enregistrer_temps 102 1 201.1
+
+enregistrer_temps 101 1 200.1
+
+enregistrer_temps 106 2 412.2
+
+enregistrer_temps 105 2 410.2
+
+enregistrer_temps 104 2 408.2
+
+enregistrer_temps 103 2 406.2
+
+enregistrer_temps 102 2 404.2
+
+enregistrer_temps 101 2 402.2
+
+enregistrer_temps 106 3 621.3
+
+enregistrer_temps 105 3 618.3
+
+enregistrer_temps 104 3 615.3
+
+enregistrer_temps 103 3 612.3
+
+enregistrer_temps 102 3 609.3
+
+enregistrer_temps 101 3 606.3
+
+enregistrer_temps 106 4 832.4
+
+enregistrer_temps 105 4 828.4
+
+enregistrer_temps 104 4 824.4
+
+enregistrer_temps 103 4 820.4
+
+enregistrer_temps 102 4 816.4
+
+enregistrer_temps 101 4 812.4
+
+enregistrer_temps 106 5 1045.5
+
+enregistrer_temps 105 5 1040.5
+
+enregistrer_temps 104 5 1035.5
+
+enregistrer_temps 103 5 1030.5
+
+enregistrer_temps 102 5 1025.5
+
+enregistrer_temps 101 5 1020.5
+
+enregistrer_temps 106 6 1260.6
+
+enregistrer_temps 105 6 1254.6
+
+enregistrer_temps 104 6 1248.6
+
+enregistrer_temps 103 6 1242.6
+
+enregistrer_temps 102 6 1236.6
+
+enregistrer_temps 101 6 1230.6
+
+enregistrer_temps 106 7 1477.7
+
+enregistrer_temps 105 7 1470.7
+
+enregistrer_temps 104 7 1463.7
+
+enregistrer_temps 103 7 1456.7
+
+enregistrer_temps 102 7 1449.7
+
+enregistrer_temps 101 7 1442.7
+
+enregistrer_temps 106 8 1696.8
+
+enregistrer_temps 105 8 1688.8
+
+enregistrer_temps 104 8 1680.8
+
+enregistrer_temps 103 8 1672.8
+
+enregistrer_temps 102 8 1664.8
+
+enregistrer_temps 101 8 1656.8
+
+enregistrer_temps 106 9 1917.9
+
+enregistrer_temps 105 9 1908.9
+
+enregistrer_temps 104 9 1899.9
+
+enregistrer_temps 103 9 1890.9
+
+enregistrer_temps 102 9 1881.9
+
+enregistrer_temps 101 9 1872.9
+
+enregistrer_temps 106 10 2141.0
+
+enregistrer_temps 105 10 2131.0
+
+enregistrer_temps 104 10 2121.0
+
+enregistrer_temps 103 10 2111.0
+
+enregistrer_temps 102 10 2101.0
+
+afficher_temps_equipes 2
+
+afficher_temps 196
+
+afficher_temps 101
+
+enregistrer_temps 101 10 2091.0
+
+exit

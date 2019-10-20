@@ -1,4 +1,4 @@
 ﻿  sprint5.c
-C:\Users\manil\Documents\GitHub\IAProjet1\IAProjet1-master\IAP Project5\sprint5.c(195,24): warning C4047: '=' : les niveaux d'indirection de 'unsigned char *' et de 'int' sont différents
-C:\Users\manil\Documents\GitHub\IAProjet1\IAProjet1-master\IAP Project5\sprint5.c(220,20): warning C4018: '<' : incompatibilité signed/unsigned
-  IAP Project5.vcxproj -> C:\Users\manil\Documents\GitHub\IAProjet1\IAProjet1-master\IAP Project1\x64\Debug\IAP Project5.exe
+D:\IUT\Projet IAP1\IAProjet1\IAProjet1-master\IAP Project5\sprint5.c(200,24): warning C4047:  '=' : les niveaux d'indirection de 'unsigned char *' et de 'int' sont différents
+D:\IUT\Projet IAP1\IAProjet1\IAProjet1-master\IAP Project5\sprint5.c(227,20): warning C4018:  '<' : incompatibilité signed/unsigned
+  IAP Project5.vcxproj -> D:\IUT\Projet IAP1\IAProjet1\IAProjet1-master\IAP Project1\x64\Debug\IAP Project5.exe

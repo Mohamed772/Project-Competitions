@@ -1,0 +1,314 @@
+inscription dossard 101
+inscription dossard 102
+inscription dossard 103
+T0 P01 101 P02 102 P03 103
+inscription dossard 104
+inscription dossard 105
+inscription dossard 106
+inscription dossard 107
+inscription dossard 108
+inscription dossard 109
+inscription dossard 110
+inscription dossard 111
+inscription dossard 112
+inscription dossard 113
+inscription dossard 114
+inscription dossard 115
+inscription dossard 116
+inscription dossard 117
+inscription dossard 118
+inscription dossard 119
+inscription dossard 120
+inscription dossard 121
+inscription dossard 122
+inscription dossard 123
+inscription dossard 124
+inscription dossard 125
+inscription dossard 126
+inscription dossard 127
+inscription dossard 128
+inscription dossard 129
+inscription dossard 130
+inscription dossard 131
+inscription dossard 132
+inscription dossard 133
+T0 P01 101 P02 102 P03 103
+T1 P11 104 P12 105 P13 106
+T2 P21 107 P22 108 P23 109
+T3 P31 110 P32 111 P33 112
+T4 P41 113 P42 114 P43 115
+T5 P51 116 P52 117 P53 118
+T6 P61 119 P62 120 P63 121
+T7 P71 122 P72 123 P73 124
+T8 P81 125 P82 126 P83 127
+T9 P91 128 P92 129 P93 130
+T10 P101 131 P102 132 P103 133
+inscription dossard 134
+inscription dossard 135
+inscription dossard 136
+inscription dossard 137
+inscription dossard 138
+inscription dossard 139
+inscription dossard 140
+inscription dossard 141
+inscription dossard 142
+inscription dossard 143
+inscription dossard 144
+inscription dossard 145
+inscription dossard 146
+inscription dossard 147
+inscription dossard 148
+inscription dossard 149
+inscription dossard 150
+inscription dossard 151
+inscription dossard 152
+inscription dossard 153
+inscription dossard 154
+inscription dossard 155
+inscription dossard 156
+inscription dossard 157
+inscription dossard 158
+inscription dossard 159
+inscription dossard 160
+inscription dossard 161
+inscription dossard 162
+inscription dossard 163
+inscription dossard 164
+inscription dossard 165
+inscription dossard 166
+inscription dossard 167
+inscription dossard 168
+inscription dossard 169
+inscription dossard 170
+inscription dossard 171
+inscription dossard 172
+inscription dossard 173
+inscription dossard 174
+inscription dossard 175
+inscription dossard 176
+inscription dossard 177
+inscription dossard 178
+inscription dossard 179
+inscription dossard 180
+inscription dossard 181
+inscription dossard 182
+inscription dossard 183
+inscription dossard 184
+inscription dossard 185
+inscription dossard 186
+inscription dossard 187
+inscription dossard 188
+inscription dossard 189
+inscription dossard 190
+inscription dossard 191
+inscription dossard 192
+inscription dossard 193
+inscription dossard 194
+inscription dossard 195
+inscription dossard 196
+T0 0.0
+T1 0.0
+T2 0.0
+T3 0.0
+T4 0.0
+T5 0.0
+T6 0.0
+T7 0.0
+T8 0.0
+T9 0.0
+T10 0.0
+T11 0.0
+T12 0.0
+T13 0.0
+T14 0.0
+T15 0.0
+T16 0.0
+T17 0.0
+T18 0.0
+T19 0.0
+T20 0.0
+T21 0.0
+T22 0.0
+T23 0.0
+T24 0.0
+T25 0.0
+T26 0.0
+T27 0.0
+T28 0.0
+T29 0.0
+T30 52.1
+T31 55.1
+detection_fin_poursuite
+T30 611.0
+T31 641.0
+T0 P01 101 P02 102 P03 103
+T1 P11 104 P12 105 P13 106
+T2 P21 107 P22 108 P23 109
+T3 P31 110 P32 111 P33 112
+T4 P41 113 P42 114 P43 115
+T5 P51 116 P52 117 P53 118
+T6 P61 119 P62 120 P63 121
+T7 P71 122 P72 123 P73 124
+T8 P81 125 P82 126 P83 127
+T9 P91 128 P92 129 P93 130
+T10 P101 131 P102 132 P103 133
+T11 P111 134 P112 135 P113 136
+T12 P121 137 P122 138 P123 139
+T13 P131 140 P132 141 P133 142
+T14 P141 143 P142 144 P143 145
+T15 P151 146 P152 147 P153 148
+T16 P161 149 P162 150 P163 151
+T17 P171 152 P172 153 P173 154
+T18 P181 155 P182 156 P183 157
+T19 P191 158 P192 159 P193 160
+T20 P201 161 P202 162 P203 163
+T21 P211 164 P212 165 P213 166
+T22 P221 167 P222 168 P223 169
+T23 P231 170 P232 171 P233 172
+T24 P241 173 P242 174 P243 175
+T25 P251 176 P252 177 P253 178
+T26 P261 179 P262 180 P263 181
+T27 P271 182 P272 183 P273 184
+T28 P281 185 P282 186 P283 187
+T29 P291 188 P292 189 P293 190
+T30 P301 191 P302 192 P303 193
+T31 P311 194 P312 195 P313 196
+detection_fin_poursuite
+T28 711.0
+T29 741.0
+detection_fin_poursuite
+T26 811.0
+T27 841.0
+T31 1 P313 55.1
+T31 2 P313 112.2
+T31 3 P313 171.3
+T31 4 P313 232.4
+T31 5 P313 295.5
+T31 6 P313 360.6
+T31 7 P313 427.7
+T31 8 P313 496.8
+T31 9 P313 567.9
+T31 10 P313 641.0
+detection_fin_poursuite
+T24 911.0
+T25 941.0
+detection_fin_poursuite
+T22 1011.0
+T23 1041.0
+detection_fin_poursuite
+T20 1111.0
+T21 1141.0
+detection_fin_poursuite
+T18 1211.0
+T19 1241.0
+detection_fin_poursuite
+T16 1311.0
+T17 1341.0
+detection_fin_poursuite
+T14 1411.0
+T15 1441.0
+detection_fin_poursuite
+T12 1511.0
+T13 1541.0
+detection_fin_poursuite
+T10 1611.0
+T11 1641.0
+detection_fin_poursuite
+T8 1711.0
+T9 1741.0
+detection_fin_poursuite
+T6 1811.0
+T7 1841.0
+detection_fin_poursuite
+T4 1911.0
+T5 1941.0
+detection_fin_poursuite
+T2 2011.0
+T3 2041.0
+T0 1890.9
+T1 1917.9
+T2 2011.0
+T3 2041.0
+T4 1911.0
+T5 1941.0
+T6 1811.0
+T7 1841.0
+T8 1711.0
+T9 1741.0
+T10 1611.0
+T11 1641.0
+T12 1511.0
+T13 1541.0
+T14 1411.0
+T15 1441.0
+T16 1311.0
+T17 1341.0
+T18 1211.0
+T19 1241.0
+T20 1111.0
+T21 1141.0
+T22 1011.0
+T23 1041.0
+T24 911.0
+T25 941.0
+T26 811.0
+T27 841.0
+T28 711.0
+T29 741.0
+T30 611.0
+T31 641.0
+T31 1 P313 55.1
+T31 2 P313 112.2
+T31 3 P313 171.3
+T31 4 P313 232.4
+T31 5 P313 295.5
+T31 6 P313 360.6
+T31 7 P313 427.7
+T31 8 P313 496.8
+T31 9 P313 567.9
+T31 10 P313 641.0
+T0 1 P01 200.1
+T0 2 P01 402.2
+T0 3 P01 606.3
+T0 4 P01 812.4
+T0 5 P01 1020.5
+T0 6 P01 1230.6
+T0 7 P01 1442.7
+T0 8 P01 1656.8
+T0 9 P01 1872.9
+detection_fin_poursuite
+T0 2111.0
+T1 2141.0
+detection_fin_competition
+T30 611.0
+T31 641.0
+T28 711.0
+T29 741.0
+T26 811.0
+T27 841.0
+T24 911.0
+T25 941.0
+T22 1011.0
+T23 1041.0
+T20 1111.0
+T21 1141.0
+T18 1211.0
+T19 1241.0
+T16 1311.0
+T17 1341.0
+T14 1411.0
+T15 1441.0
+T12 1511.0
+T13 1541.0
+T10 1611.0
+T11 1641.0
+T8 1711.0
+T9 1741.0
+T6 1811.0
+T7 1841.0
+T4 1911.0
+T5 1941.0
+T2 2011.0
+T3 2041.0
+T0 2111.0
+T1 2141.0
