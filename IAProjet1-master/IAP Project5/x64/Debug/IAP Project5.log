@@ -1,4 +1,6 @@
 ﻿  sprint5.c
-D:\IUT\Projet IAP1\IAProjet1\IAProjet1-master\IAP Project5\sprint5.c(200,24): warning C4047:  '=' : les niveaux d'indirection de 'unsigned char *' et de 'int' sont différents
-D:\IUT\Projet IAP1\IAProjet1\IAProjet1-master\IAP Project5\sprint5.c(227,20): warning C4018:  '<' : incompatibilité signed/unsigned
-  IAP Project5.vcxproj -> D:\IUT\Projet IAP1\IAProjet1\IAProjet1-master\IAP Project1\x64\Debug\IAP Project5.exe
+C:\Users\manil\Documents\GitHub\IAProjet1\IAProjet1-master\IAP Project5\sprint5.c(57,25): warning C4133: 'fonction' : types incompatibles - de 'Equipe *' à 'Course *'
+C:\Users\manil\Documents\GitHub\IAProjet1\IAProjet1-master\IAP Project5\sprint5.c(202,26): warning C4047: '=' : les niveaux d'indirection de 'unsigned char *' et de 'int' sont différents
+C:\Users\manil\Documents\GitHub\IAProjet1\IAProjet1-master\IAP Project5\sprint5.c(229,20): warning C4018: '<' : incompatibilité signed/unsigned
+C:\Users\manil\Documents\GitHub\IAProjet1\IAProjet1-master\IAP Project5\sprint5.c(240,43): warning C4028: paramètre formel 1 différent de la déclaration
+  IAP Project5.vcxproj -> C:\Users\manil\Documents\GitHub\IAProjet1\IAProjet1-master\IAP Project1\x64\Debug\IAP Project5.exe

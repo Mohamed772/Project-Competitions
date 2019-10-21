@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
+//definition constantes
 #define MAX_JOUEUR_PAR_EQUIPE 3
 #define lgMot 50
 #define MAX_EQUIPE 32
@@ -19,20 +20,20 @@ typedef struct {
 	unsigned int num_dossard;
 	Mesure liste_temps[MAX_TOUR];
 	unsigned int tours;
-} Patineur;
+} Patineur;//structure contenant les informations d'un patineurs
 
 typedef struct {
 	Patineur personnes[MAX_JOUEUR_PAR_EQUIPE];
 	char pays[lgMot + 1];
 	Mesure liste_temps[MAX_TOUR];
 	unsigned int tours;
-} Equipe;
+} Equipe;//structure contenant les informations d'une équipe
 
 typedef struct {
 	Equipe equipes[MAX_EQUIPE];
 	unsigned int compteur_nb_equipes;
 	unsigned int tour_max;
-} Course; //competition
+} Course; // /!\ structure définissant toute la competition
 
 void detection_fin_parcours(Course* liste_equipes);
 unsigned int compare_tour_equipe(Equipe equipe);

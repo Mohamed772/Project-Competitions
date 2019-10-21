@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
+//definition constantes
 #define MAX_JOUEUR_PAR_EQUIPE 3
 #define DOSSARD 100
 #define lgMot 50
@@ -9,7 +10,7 @@
 
 #pragma warning(disable : 4996)
 
-int compteur_dossard = 1;
+int compteur_dossard = 1; //variables globales qui seront supprimées par la suite
 int compteur_nb_equipes = 0;
 
 
@@ -17,17 +18,17 @@ int compteur_nb_equipes = 0;
 typedef struct {
 	char nom[lgMot + 1];
 	unsigned int num_dossard;
-}Patineur;
+}Patineur; //structure contenant les informations d'un patineur
 
 typedef struct {
 	Patineur personnes[MAX_JOUEUR_PAR_EQUIPE];
 	char pays[lgMot + 1];
-}Equipe;
+}Equipe;//structure contenant les informations d'une équipe
 
 typedef struct {
 	Equipe equipes[MAX_EQUIPE];
 
-}Equipes;
+}Equipes;//structure contenant un tableau de toutes les équipes de la compétition
 
 Equipes liste_equipes;
 

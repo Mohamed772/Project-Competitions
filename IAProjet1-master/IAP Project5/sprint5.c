@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 
+//definition constantes
 #define MAX_JOUEUR_PAR_EQUIPE 3
 #define lgMot 50
 #define MAX_EQUIPE 32
@@ -13,21 +14,21 @@
 
 typedef struct {
 	float temps;
-} Mesure;
+} Mesure;//structure de la mesure du temps
 
 typedef struct {
 	char nom[lgMot + 1];
 	unsigned int num_dossard;
 	Mesure liste_temps[MAX_TOUR];
 	unsigned int tours;
-} Patineur;
+} Patineur;//structure contenant les informations d'un patineurs
 
 typedef struct {
 	Patineur personnes[MAX_JOUEUR_PAR_EQUIPE];
 	char pays[lgMot + 1];
 	Mesure liste_temps[MAX_TOUR];
 	unsigned int tours;
-} Equipe;
+} Equipe;//structure contenant les informations d'une équipe
 
 typedef struct {
 	Equipe equipes[MAX_EQUIPE];
@@ -35,7 +36,7 @@ typedef struct {
 	unsigned int tour_max;
 	unsigned int epreuves_max;
 	unsigned int epreuve_actuel;
-} Course; //competition
+} Course; // /!\ structure définissant toute la competition
 
 
 void initialisation_temps(Course* liste_equipes);
@@ -53,6 +54,7 @@ void trier_equipes(Course* liste_equipes);
 
 void inscrire_equipe(Course* liste_equipes) {
 	Equipe e;
+	initialisation_temps(&e);
 	char mot[lgMot + 1];
 	static unsigned int dos = 101;
 	if (liste_equipes->compteur_nb_equipes <= MAX_EQUIPE) {
@@ -170,8 +172,8 @@ void affichage_temps_equipes(Course* liste_equipes) {
 	liste_equipes->equipes[i].liste_temps[tour - 1].temps = compare_temps_joueurs(liste_equipes->equipes[i], tour);
 	liste_equipes->equipes[i + 1].liste_temps[tour - 1].temps = compare_temps_joueurs(liste_equipes->equipes[i + 1], tour);
 	for (unsigned int j=i; j < i+NB_EQUIPE_EPREUVE; j++){
-		if (liste_equipes->equipes[j].liste_temps[tour - 1].temps == -1.) {
-			printf("%s Indisponible", liste_equipes->equipes[j].pays);
+		if (liste_equipes->equipes[j].liste_temps[tour - 1].temps == -1) {
+			printf("%s Indisponible\n", liste_equipes->equipes[j].pays);
 		}
 		else {
 			printf("%s %.1f\n", liste_equipes->equipes[j].pays, liste_equipes->equipes[j].liste_temps[tour - 1].temps);
@@ -235,15 +237,15 @@ void trier_equipes(Course* liste_equipes){
 	}
 }
 
-void initialisation_temps(Course* liste_equipes) {
-	for (unsigned int i = 0; i <= MAX_EQUIPE; i++) {
-		for (unsigned int j = 0; j < MAX_TOUR; j++) {
-			liste_equipes->equipes[i].liste_temps[j].temps = -1.;
-			for (unsigned int k = 0; k < MAX_JOUEUR_PAR_EQUIPE; k++) {
-				liste_equipes->equipes[i].personnes[k].liste_temps[j].temps = -1.;
-			}
+void initialisation_temps(Equipe* equipe) {
+	
+	for (unsigned int j = 0; j < MAX_TOUR; j++) {
+		equipe->liste_temps[j].temps = -1.;
+		for (unsigned int k = 0; k < MAX_JOUEUR_PAR_EQUIPE; k++) {
+			equipe->personnes[k].liste_temps[j].temps = -1.;
 		}
 	}
+	
 	
 }
 
@@ -252,8 +254,6 @@ void initialisation_temps(Course* liste_equipes) {
 int main() {
 	Course liste_equipes;
 	liste_equipes.compteur_nb_equipes = 0;
-	
-	initialisation_temps(&liste_equipes);
 
 	char mot[lgMot + 1];
 
