@@ -184,11 +184,11 @@ void affichage_temps_equipes(Course* liste_equipes) {
 
 void detection_fin_parcours(Course* liste_equipes) {
 	unsigned int tour_max = liste_equipes->tour_max;
-	static unsigned int compteur_fin_parcours=1;
-	static unsigned char* etat_parcours[16] = { 0 };
+	static unsigned int compteur_fin_parcours=0;
+	static unsigned char etat_parcours[16] = { 0 };
 
 	for (unsigned int i = 0; i < liste_equipes->compteur_nb_equipes; i += 2) {
-		if ((liste_equipes->equipes[i].tours == tour_max) && (liste_equipes->equipes[i + 1].tours == tour_max) && etat_parcours[i] == 0) {
+		if ((liste_equipes->equipes[i].tours == tour_max) && (liste_equipes->equipes[i + 1].tours == tour_max) && etat_parcours[i/2] == 0) {
 			
 			printf("detection_fin_poursuite\n");
 			if (liste_equipes->equipes[i].liste_temps[tour_max - 1].temps <= liste_equipes->equipes[i + 1].liste_temps[tour_max - 1].temps){
@@ -199,12 +199,12 @@ void detection_fin_parcours(Course* liste_equipes) {
 				printf("%s %.1f\n", liste_equipes->equipes[i + 1].pays, liste_equipes->equipes[i + 1].liste_temps[tour_max - 1].temps);
 				printf("%s %.1f\n", liste_equipes->equipes[i].pays, liste_equipes->equipes[i].liste_temps[tour_max - 1].temps);
 			}
-			etat_parcours[i] = 1;
+			etat_parcours[i/2] = 1;
 			compteur_fin_parcours++;
 
 		}
 	}
-	if (compteur_fin_parcours == liste_equipes->epreuves_max)
+	if (liste_equipes->epreuves_max == compteur_fin_parcours)
 		detection_fin_competition(liste_equipes);
 }
 
