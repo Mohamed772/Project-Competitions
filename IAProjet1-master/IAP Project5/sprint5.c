@@ -173,7 +173,7 @@ void affichage_temps_equipes(Course* liste_equipes) {
 	liste_equipes->equipes[i + 1].liste_temps[tour - 1].temps = compare_temps_joueurs(liste_equipes->equipes[i + 1], tour);
 	for (unsigned int j=i; j < i+NB_EQUIPE_EPREUVE; j++){
 		if (liste_equipes->equipes[j].liste_temps[tour - 1].temps == -1) {
-			printf("%s Indisponible\n", liste_equipes->equipes[j].pays);
+			printf("%s indisponible\n", liste_equipes->equipes[j].pays);
 		}
 		else {
 			printf("%s %.1f\n", liste_equipes->equipes[j].pays, liste_equipes->equipes[j].liste_temps[tour - 1].temps);
