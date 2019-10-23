@@ -1,3 +1,6 @@
+/*Projet : Gestion d'une compétion de poursuite par équipe
+Créé le : 07/10/2019
+Auteurs : Mohamed BEN BELKASEN, Raphaël CATARINO, Manil RICHARD*/
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -77,11 +80,12 @@ void inscrire_equipe(Course* liste_equipes) {
 }
 
 void afficher_equipes(const Course* liste_equipes) {
-	Equipe e;
-	for (unsigned int i = 0; i < liste_equipes->compteur_nb_equipes; i++) {
-		e = liste_equipes->equipes[i];
-		printf("%s %s %u %s %u %s %u\n", e.pays, e.personnes[0].nom, e.personnes[0].num_dossard, e.personnes[1].nom,
-			e.personnes[1].num_dossard, e.personnes[2].nom, e.personnes[2].num_dossard);
+	unsigned int i = liste_equipes->epreuve_actuel * 2;
+	for (unsigned int j = i; j < i + NB_EQUIPE_EPREUVE;j++) {
+		printf("%s %s %u %s %u %s %u\n", liste_equipes->equipes[j].pays, liste_equipes->equipes[j].personnes[0].nom,
+			liste_equipes->equipes[j].personnes[0].num_dossard, liste_equipes->equipes[j].personnes[1].nom,
+			liste_equipes->equipes[j].personnes[1].num_dossard, liste_equipes->equipes[j].personnes[2].nom,
+			liste_equipes->equipes[j].personnes[2].num_dossard);
 	}
 }
 
@@ -201,7 +205,7 @@ void detection_fin_parcours(Course* liste_equipes) {
 			}
 			etat_parcours[i/2] = 1;
 			compteur_fin_parcours++;
-
+			liste_equipes->epreuve_actuel++;
 		}
 	}
 	if (liste_equipes->epreuves_max == compteur_fin_parcours)
