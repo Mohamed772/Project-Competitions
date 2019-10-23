@@ -1,0 +1,93 @@
+inscription dossard 101
+inscription dossard 102
+inscription dossard 103
+inscription dossard 104
+inscription dossard 105
+inscription dossard 106
+inscription dossard 107
+inscription dossard 108
+inscription dossard 109
+inscription dossard 110
+inscription dossard 111
+inscription dossard 112
+inscription dossard 113
+inscription dossard 114
+inscription dossard 115
+inscription dossard 116
+inscription dossard 117
+inscription dossard 118
+inscription dossard 119
+inscription dossard 120
+inscription dossard 121
+inscription dossard 122
+inscription dossard 123
+inscription dossard 124
+inscription dossard 125
+inscription dossard 126
+inscription dossard 127
+inscription dossard 128
+inscription dossard 129
+inscription dossard 130
+inscription dossard 131
+inscription dossard 132
+inscription dossard 133
+inscription dossard 134
+inscription dossard 135
+inscription dossard 136
+inscription dossard 137
+inscription dossard 138
+inscription dossard 139
+inscription dossard 140
+inscription dossard 141
+inscription dossard 142
+inscription dossard 143
+inscription dossard 144
+inscription dossard 145
+inscription dossard 146
+inscription dossard 147
+inscription dossard 148
+detection_fin_poursuite
+Russie 442.0
+Japon 450.3
+detection_fin_poursuite
+Canada 447.8
+Pologne 453.6
+detection_fin_poursuite
+Hollande 455.7
+Coree 459.8
+detection_fin_poursuite
+Norvege 456.7
+Italie 458.3
+detection_fin_poursuite
+Australie 435.4
+Chine 439.9
+France Pierron 131 Huot 132 Monvoisin 133
+Hongrie Jaszapati 134 Bacskai 135 Keszler 136
+detection_fin_poursuite
+France 448.7
+Hongrie 450.1
+detection_fin_poursuite
+Finlande 444.3
+Autriche 450.5
+Allemagne Wolf 143 Volker 144 Rothenburger 145
+USA Henning 146 Young 147 Blair 148
+detection_fin_poursuite
+Allemagne 454.3
+USA 455.9
+detection_fin_competition
+Australie 435.4
+Chine 439.9
+Russie 442.0
+Finlande 444.3
+Canada 447.8
+France 448.7
+Hongrie 450.1
+Japon 450.3
+Autriche 450.5
+Pologne 453.6
+Allemagne 454.3
+Hollande 455.7
+USA 455.9
+Norvege 456.7
+Italie 458.3
+Coree 459.8

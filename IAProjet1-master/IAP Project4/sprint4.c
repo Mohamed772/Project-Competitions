@@ -36,29 +36,38 @@ typedef struct {
 	unsigned int epreuve_actuel;
 } Course; // /!\ structure définissant toute la competition
 
-void detection_fin_parcours(Course* liste_equipes);
+void inscrire_equipe(Course* liste_equipes);
+void afficher_equipes(const Course* liste_equipes);
+void trouver_dossard(unsigned int dossard, unsigned int* num_equipe, unsigned int* num_patineur);
+void enregistrement_temps(Course* liste_equipes);
+void affichage_temps(const Course* liste_equipes);
 unsigned int compare_tour_equipe(Equipe equipe);
 float compare_temps_joueurs(Equipe equipe, int tour_actuel);
+void affichage_temps_equipes(Course* liste_equipes);
+void detection_fin_parcours(Course* liste_equipes);
+void trier_equipes(Course* liste_equipes);
+void initialisation_temps(Equipe* equipe);
 
 
 
-
-void inscrire_equipe(Equipe* e, Course* liste_equipes) {
+void inscrire_equipe(Course* liste_equipes) {
+	Equipe e;
+	initialisation_temps(&e);
 	char mot[lgMot + 1];
 	static unsigned int dos = 101;
 	if (liste_equipes->compteur_nb_equipes <= MAX_EQUIPE) {
 		scanf("%s", &mot);
-		strcpy(e->pays, mot);
+		strcpy(e.pays, mot);
 
 		for (int i = 0; i <= MAX_JOUEUR_PAR_EQUIPE - 1; ++i) {
 			scanf("%s", &mot);
-			strcpy(e->personnes[i].nom, mot);
-			e->personnes[i].num_dossard = dos++;
-			e->personnes[i].tours = 0;
-			printf("inscription dossard %d\n", e->personnes[i].num_dossard);
+			strcpy(e.personnes[i].nom, mot);
+			e.personnes[i].num_dossard = dos++;
+			e.personnes[i].tours = 0;
+			printf("inscription dossard %d\n", e.personnes[i].num_dossard);
 		}
 
-		liste_equipes->equipes[liste_equipes->compteur_nb_equipes] = *e;
+		liste_equipes->equipes[liste_equipes->compteur_nb_equipes] = e;
 		liste_equipes->compteur_nb_equipes+=1;
 	}
 	else
@@ -66,11 +75,12 @@ void inscrire_equipe(Equipe* e, Course* liste_equipes) {
 }
 
 void afficher_equipes(const Course* liste_equipes) {
-	Equipe e;
-	for (unsigned int i = 0; i < liste_equipes->compteur_nb_equipes; i++) {
-		e = liste_equipes->equipes[i];
-		printf("%s %s %u %s %u %s %u\n", e.pays, e.personnes[0].nom, e.personnes[0].num_dossard, e.personnes[1].nom,
-			e.personnes[1].num_dossard, e.personnes[2].nom, e.personnes[2].num_dossard);
+	unsigned int i = liste_equipes->epreuve_actuel * 2;
+	for (unsigned int j = i; j < i + NB_EQUIPE_EPREUVE; j++) {
+		printf("%s %s %u %s %u %s %u\n", liste_equipes->equipes[j].pays, liste_equipes->equipes[j].personnes[0].nom,
+			liste_equipes->equipes[j].personnes[0].num_dossard, liste_equipes->equipes[j].personnes[1].nom,
+			liste_equipes->equipes[j].personnes[1].num_dossard, liste_equipes->equipes[j].personnes[2].nom,
+			liste_equipes->equipes[j].personnes[2].num_dossard);
 	}
 }
 
@@ -88,7 +98,7 @@ void trouver_dossard(unsigned int dossard, unsigned int* num_equipe, unsigned in
 }
 
 void enregistrement_temps(Course* liste_equipes) {
-	unsigned int num_equipe, num_patineur, dossard, num_tours;
+	unsigned int num_equipe =0, num_patineur, dossard, num_tours;
 	float temps;
 
 	scanf("%u %u %f", &dossard, &num_tours, &temps);
@@ -142,15 +152,21 @@ unsigned int compare_tour_equipe(Equipe equipe) {
 
 float compare_temps_joueurs(Equipe equipe, int tour_actuel) {
 	tour_actuel--;
-	if ((equipe.personnes[0].liste_temps[tour_actuel].temps >= equipe.personnes[1].liste_temps[tour_actuel].temps) 
-		&& (equipe.personnes[0].liste_temps[tour_actuel].temps >= equipe.personnes[2].liste_temps[tour_actuel].temps)) {
-		return equipe.personnes[0].liste_temps[tour_actuel].temps;
+	float a = equipe.personnes[0].liste_temps[tour_actuel].temps;
+	float b = equipe.personnes[1].liste_temps[tour_actuel].temps;
+	float c = equipe.personnes[2].liste_temps[tour_actuel].temps;
+
+	if ((a == -1.) || (b == -1.) || (c == -1.))
+		return -1.;
+
+	if ((a >= b) && (a >= c)) {
+		return a;
 	}
-	else if (equipe.personnes[1].liste_temps[tour_actuel].temps >= equipe.personnes[2].liste_temps[tour_actuel].temps) {
-		return equipe.personnes[1].liste_temps[tour_actuel].temps;
+	else if (b >= c) {
+		return b;
 	}
-	else return equipe.personnes[2].liste_temps[tour_actuel].temps;
-	
+	else return c;
+
 }
 
 void affichage_temps_equipes(Course* liste_equipes) {
@@ -173,26 +189,46 @@ void affichage_temps_equipes(Course* liste_equipes) {
 
 void detection_fin_parcours(Course* liste_equipes) {
 	unsigned int tour_max = liste_equipes->tour_max;
-	for (unsigned int i = 0; i < liste_equipes->compteur_nb_equipes; i+=2) {
-		if ((liste_equipes->equipes[i].tours  == tour_max) && (liste_equipes->equipes[i + 1].tours == tour_max)) {
+	static unsigned int compteur_fin_parcours = 0;
+	static unsigned char etat_parcours[16] = { 0 };
+
+	for (unsigned int i = 0; i < liste_equipes->compteur_nb_equipes; i += 2) {
+		if ((liste_equipes->equipes[i].tours == tour_max) && (liste_equipes->equipes[i + 1].tours == tour_max) && etat_parcours[i / 2] == 0) {
+
 			printf("detection_fin_poursuite\n");
-			printf("%s %.1f\n", liste_equipes->equipes[i].pays, liste_equipes->equipes[i].liste_temps[tour_max - 1].temps);
-			printf("%s %.1f\n", liste_equipes->equipes[i + 1].pays, liste_equipes->equipes[i + 1].liste_temps[tour_max - 1].temps);
+			if (liste_equipes->equipes[i].liste_temps[tour_max - 1].temps <= liste_equipes->equipes[i + 1].liste_temps[tour_max - 1].temps) {
+				printf("%s %.1f\n", liste_equipes->equipes[i].pays, liste_equipes->equipes[i].liste_temps[tour_max - 1].temps);
+				printf("%s %.1f\n", liste_equipes->equipes[i + 1].pays, liste_equipes->equipes[i + 1].liste_temps[tour_max - 1].temps);
+			}
+			else if (liste_equipes->equipes[i].liste_temps[tour_max - 1].temps > liste_equipes->equipes[i + 1].liste_temps[tour_max - 1].temps) {
+				printf("%s %.1f\n", liste_equipes->equipes[i + 1].pays, liste_equipes->equipes[i + 1].liste_temps[tour_max - 1].temps);
+				printf("%s %.1f\n", liste_equipes->equipes[i].pays, liste_equipes->equipes[i].liste_temps[tour_max - 1].temps);
+			}
+			etat_parcours[i / 2] = 1;
+			compteur_fin_parcours++;
+			liste_equipes->epreuve_actuel++;
 		}
 	}
 }
 
+void initialisation_temps(Equipe* equipe) {
+	for (unsigned int j = 0; j < MAX_TOUR; j++) {
+		equipe->liste_temps[j].temps = -1.;
+		for (unsigned int k = 0; k < MAX_JOUEUR_PAR_EQUIPE; k++) {
+			equipe->personnes[k].liste_temps[j].temps = -1.;
+		}
+	}
+}
 
 int main() {
 	Course liste_equipes; 
 	liste_equipes.compteur_nb_equipes = 0;
-	Equipe e;
 	char mot[lgMot + 1];
 
 	do {
 		scanf("%s", &mot);
 		if (strcmp(mot, "inscrire_equipe") == 0) {
-			inscrire_equipe(&e, &liste_equipes);
+			inscrire_equipe(&liste_equipes);
 		}
 		if (strcmp(mot, "afficher_equipes") == 0) {
 			afficher_equipes(&liste_equipes);

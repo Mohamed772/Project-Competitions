@@ -1,0 +1,88 @@
+inscription dossard 101
+inscription dossard 102
+inscription dossard 103
+inscription dossard 104
+inscription dossard 105
+inscription dossard 106
+inscription dossard 107
+inscription dossard 108
+inscription dossard 109
+inscription dossard 110
+inscription dossard 111
+inscription dossard 112
+inscription dossard 113
+inscription dossard 114
+inscription dossard 115
+inscription dossard 116
+inscription dossard 117
+inscription dossard 118
+inscription dossard 119
+inscription dossard 120
+inscription dossard 121
+inscription dossard 122
+inscription dossard 123
+inscription dossard 124
+inscription dossard 125
+inscription dossard 126
+inscription dossard 127
+inscription dossard 128
+inscription dossard 129
+inscription dossard 130
+inscription dossard 131
+inscription dossard 132
+inscription dossard 133
+inscription dossard 134
+inscription dossard 135
+inscription dossard 136
+inscription dossard 137
+inscription dossard 138
+inscription dossard 139
+inscription dossard 140
+inscription dossard 141
+inscription dossard 142
+inscription dossard 143
+inscription dossard 144
+inscription dossard 145
+inscription dossard 146
+inscription dossard 147
+inscription dossard 148
+Russie 1 Donchenko 73.9
+Russie 2 Donchenko 152.2
+Pologne 1 Czyszczon 61.5
+Pologne 2 Czyszczon 140.5
+Pologne 3 Czyszczon 215.6
+Pologne 4 Czyszczon 282.8
+Canada 1 Morrison 71.8
+Canada 2 Morrison 134.3
+Canada 3 Morrison 216.4
+Canada 4 Morrison 289.8
+Canada 5 Morrison 376.5
+Canada 1 Blondin 70.7
+Canada 2 Blondin 145.0
+Canada 3 Blondin 212.7
+Canada 4 Blondin 297.8
+Canada 5 Blondin 361.8
+Canada 6 Blondin 439.1
+Norvege 1 Korsmo 68.4
+Norvege 2 Korsmo 150.3
+Chine 1 Wang 63.0
+Chine 2 Wang 133.2
+Chine 1 Qiaobo 60.1
+Chine 2 Qiaobo 131.4
+Chine 3 Qiaobo 220.1
+Chine 4 Qiaobo 294.5
+Chine 1 Beixing 66.7
+Chine 2 Beixing 130.3
+Chine 3 Beixing 214.4
+Chine 4 Beixing 290.9
+Chine 5 Beixing 363.5
+Chine 6 Beixing 455.1
+Finlande 1 Mustonen 67.4
+Finlande 2 Mustonen 152.4
+Finlande 3 Mustonen 229.7
+Finlande 4 Mustonen 305.3
+Finlande 5 Mustonen 377.5
+Allemagne 1 Wolf 74.3
+Allemagne 2 Wolf 148.7
+Allemagne 3 Wolf 217.7
+Allemagne 4 Wolf 298.7

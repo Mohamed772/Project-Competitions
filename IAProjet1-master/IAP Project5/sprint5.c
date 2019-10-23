@@ -104,7 +104,7 @@ void trouver_dossard(unsigned int dossard, unsigned int* num_equipe, unsigned in
 }
 
 void enregistrement_temps(Course* liste_equipes) {
-	unsigned int num_equipe, num_patineur, dossard, num_tours;
+	unsigned int num_equipe = 0, num_patineur, dossard, num_tours;
 	float temps;
 
 	scanf("%u %u %f", &dossard, &num_tours, &temps);
@@ -158,14 +158,20 @@ unsigned int compare_tour_equipe(Equipe equipe) {
 
 float compare_temps_joueurs(Equipe equipe, int tour_actuel) {
 	tour_actuel--;
-	if ((equipe.personnes[0].liste_temps[tour_actuel].temps >= equipe.personnes[1].liste_temps[tour_actuel].temps)
-		&& (equipe.personnes[0].liste_temps[tour_actuel].temps >= equipe.personnes[2].liste_temps[tour_actuel].temps)) {
-		return equipe.personnes[0].liste_temps[tour_actuel].temps;
+	float a = equipe.personnes[0].liste_temps[tour_actuel].temps;
+	float b = equipe.personnes[1].liste_temps[tour_actuel].temps;
+	float c = equipe.personnes[2].liste_temps[tour_actuel].temps;
+
+	if ((a == -1.) || (b == -1.) || (c == -1.))
+		return -1.;
+
+	if ((a >= b) && (a >= c)) {
+		return a;
 	}
-	else if (equipe.personnes[1].liste_temps[tour_actuel].temps >= equipe.personnes[2].liste_temps[tour_actuel].temps) {
-		return equipe.personnes[1].liste_temps[tour_actuel].temps;
+	else if (b >= c) {
+		return b;
 	}
-	else return equipe.personnes[2].liste_temps[tour_actuel].temps;
+	else return c;
 
 }
 

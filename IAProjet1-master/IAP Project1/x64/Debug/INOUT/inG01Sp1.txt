@@ -1,0 +1,18 @@
+inscrire_equipe Japon Takagi Sato Takagu
+inscrire_equipe Russie Skoblikova Titova Donchenko
+afficher_equipes
+inscrire_equipe Pologne Pilejczyk Bosiek Czyszczon
+inscrire_equipe Canada Blondin Weidemann Morrison
+inscrire_equipe Coree Kodaira Sanghwa Boreum
+inscrire_equipe Hollande Boer Mors Gerritsen
+inscrire_equipe Norvege Bokko Jensen Korsmo
+inscrire_equipe Italie Lollobrigida Mascitto Valcepina
+inscrire_equipe Australie Boutin Bradette Macdonald 
+inscrire_equipe Chine Qiaobo Wang Beixing
+inscrire_equipe France Pierron Huot Monvoisin
+inscrire_equipe Hongrie Jaszapati Bacskai Keszler
+inscrire_equipe Finlande Mustonen Poykio Korpi
+inscrire_equipe Autriche Hunyady Herzog Steixner
+inscrire_equipe Allemagne Wolf Volker Rothenburger
+inscrire_equipe USA Henning Young Blair
+exit
