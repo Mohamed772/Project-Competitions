@@ -33,6 +33,7 @@ typedef struct {
 	Equipe equipes[MAX_EQUIPE];
 	unsigned int compteur_nb_equipes;
 	unsigned int tour_max;
+	unsigned int epreuve_actuel;
 } Course; // /!\ structure définissant toute la competition
 
 void detection_fin_parcours(Course* liste_equipes);
@@ -102,6 +103,7 @@ void enregistrement_temps(Course* liste_equipes) {
 	liste_equipes->equipes[num_equipe].tours = compare_tour_equipe(liste_equipes->equipes[num_equipe]);
 	liste_equipes->equipes[num_equipe].liste_temps[num_tours - 1].temps = compare_temps_joueurs(liste_equipes->equipes[num_equipe], num_tours);
 	detection_fin_parcours(liste_equipes);
+	liste_equipes->epreuve_actuel = (num_equipe / 2);
 }
 
 void affichage_temps(const Course* liste_equipes) {
@@ -152,23 +154,21 @@ float compare_temps_joueurs(Equipe equipe, int tour_actuel) {
 }
 
 void affichage_temps_equipes(Course* liste_equipes) {
-	for (unsigned int i = 0; i < liste_equipes->compteur_nb_equipes; i+=2 ){
-		int tour_actuel = 0;
-		int equipe1 = compare_tour_equipe(liste_equipes->equipes[i]),
-			equipe2 = compare_tour_equipe(liste_equipes->equipes[i+1]);
+	unsigned int tour;
+	scanf("%u", &tour);
+	unsigned int i = liste_equipes->epreuve_actuel * 2;
 
-		liste_equipes->equipes[i].tours = equipe1;
-		liste_equipes->equipes[i+1].tours = equipe2;
-
-		if (equipe1 >= equipe2) { tour_actuel = equipe2; }
-		else tour_actuel = equipe1;
-
-		liste_equipes->equipes[i].liste_temps[tour_actuel-1].temps = compare_temps_joueurs(liste_equipes->equipes[i], tour_actuel);
-		liste_equipes->equipes[i + 1].liste_temps[tour_actuel-1].temps = compare_temps_joueurs(liste_equipes->equipes[i + 1], tour_actuel);
-
-		printf("%s %.1f\n", liste_equipes->equipes[i].pays, liste_equipes->equipes[i].liste_temps[tour_actuel-1].temps);
-		printf("%s %.1f\n", liste_equipes->equipes[i+1].pays, liste_equipes->equipes[i+1].liste_temps[tour_actuel-1].temps);
+	liste_equipes->equipes[i].liste_temps[tour - 1].temps = compare_temps_joueurs(liste_equipes->equipes[i], tour);
+	liste_equipes->equipes[i + 1].liste_temps[tour - 1].temps = compare_temps_joueurs(liste_equipes->equipes[i + 1], tour);
+	for (unsigned int j = i; j < i + NB_EQUIPE_EPREUVE; j++) {
+		if (liste_equipes->equipes[j].liste_temps[tour - 1].temps == -1) {
+			printf("%s indisponible\n", liste_equipes->equipes[j].pays);
+		}
+		else {
+			printf("%s %.1f\n", liste_equipes->equipes[j].pays, liste_equipes->equipes[j].liste_temps[tour - 1].temps);
+		}
 	}
+
 }
 
 void detection_fin_parcours(Course* liste_equipes) {

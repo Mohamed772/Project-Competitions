@@ -42,7 +42,6 @@ typedef struct {
 } Course; // /!\ structure définissant toute la competition
 
 
-void initialisation_temps(Course* liste_equipes);
 void inscrire_equipe(Course* liste_equipes);
 void afficher_equipes(const Course* liste_equipes);
 void trouver_dossard(unsigned int dossard, unsigned int* num_equipe, unsigned int* num_patineur);
@@ -54,6 +53,8 @@ void affichage_temps_equipes(Course* liste_equipes);
 void detection_fin_parcours(Course* liste_equipes);
 void detection_fin_competition(Course* liste_equipes);
 void trier_equipes(Course* liste_equipes);
+void initialisation_temps(Equipe* equipe);
+
 
 void inscrire_equipe(Course* liste_equipes) {
 	Equipe e;
@@ -242,15 +243,12 @@ void trier_equipes(Course* liste_equipes){
 }
 
 void initialisation_temps(Equipe* equipe) {
-	
 	for (unsigned int j = 0; j < MAX_TOUR; j++) {
 		equipe->liste_temps[j].temps = -1.;
 		for (unsigned int k = 0; k < MAX_JOUEUR_PAR_EQUIPE; k++) {
 			equipe->personnes[k].liste_temps[j].temps = -1.;
 		}
 	}
-	
-	
 }
 
 

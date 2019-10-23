@@ -1,5 +1,3 @@
 ﻿  sprint5.c
-C:\Users\manil\Documents\GitHub\IAProjet1\IAProjet1-master\IAP Project5\sprint5.c(57,25): warning C4133: 'fonction' : types incompatibles - de 'Equipe *' à 'Course *'
-C:\Users\manil\Documents\GitHub\IAProjet1\IAProjet1-master\IAP Project5\sprint5.c(230,20): warning C4018: '<' : incompatibilité signed/unsigned
-C:\Users\manil\Documents\GitHub\IAProjet1\IAProjet1-master\IAP Project5\sprint5.c(241,43): warning C4028: paramètre formel 1 différent de la déclaration
+C:\Users\manil\Documents\GitHub\IAProjet1\IAProjet1-master\IAP Project5\sprint5.c(234,20): warning C4018: '<' : incompatibilité signed/unsigned
   IAP Project5.vcxproj -> C:\Users\manil\Documents\GitHub\IAProjet1\IAProjet1-master\IAP Project1\x64\Debug\IAP Project5.exe
