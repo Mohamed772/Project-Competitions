@@ -1,6 +1,6 @@
-/*Projet : Gestion d'une compétion de poursuite par équipe
-Créé le : 07/10/2019
-Auteurs : Mohamed BEN BELKACEN, Raphaël CATARINO, Manil RICHARD*/
+/*Projet : Gestion d'une compÃ©tion de poursuite par Ã©quipe
+CrÃ©Ã© le : 07/10/2019
+Auteurs : Mohamed BEN BELKACEM, RaphaÃ«l CATARINO, Manil RICHARD*/
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -32,7 +32,7 @@ typedef struct {
 	char pays[lgMot + 1];
 	Mesure liste_temps[MAX_TOUR];
 	unsigned int tours;
-} Equipe;// structure contenant les informations d'une équipe
+} Equipe;// structure contenant les informations d'une Ã©quipe
 
 typedef struct {
 	Equipe equipes[MAX_EQUIPE];
@@ -40,7 +40,7 @@ typedef struct {
 	unsigned int tour_max;
 	unsigned int epreuves_max;
 	unsigned int epreuve_actuel;
-} Competition; // structure définissant toute la competition
+} Competition; // structure dÃ©finissant toute la competition
 
 // ensemble de tous les prototypes des fonctions du projet
 void inscrire_equipe(Competition* liste_equipes);
@@ -57,11 +57,11 @@ void trier_equipes(Competition* liste_equipes);
 void initialisation_temps(Equipe* equipe);
 
 /*
- * Cette fonction enregistre le nom de l'équipe et des 3 patineurs et leurs dossards dans la variable liste_equipes.
+ * Cette fonction enregistre le nom de l'Ã©quipe et des 3 patineurs et leurs dossards dans la variable liste_equipes.
 	appelle la fonction initialisation_temps
  * \auteurs M. BEN BELKACEM, R. CATARINO, M. RICHARD
- * \param[in-out] liste_equipes qui va recevoir les informations d'une équipe e.
- * \param[scan] Variable intermédiaire e de type Equipe. Stocke les informations reçues.
+ * \param[in-out] liste_equipes qui va recevoir les informations d'une Ã©quipe e.
+ * \param[scan] Variable intermÃ©diaire e de type Equipe. Stocke les informations reÃ§ues.
  * \return void
  */
 void inscrire_equipe(Competition* liste_equipes) {
@@ -84,10 +84,10 @@ void inscrire_equipe(Competition* liste_equipes) {
 }
 
 /*
- * Cette fonction afficher le nom de l'équipe et des 3 patineurs et leurs dossards des 2 équipes de l'épreuve en cours.
+ * Cette fonction afficher le nom de l'Ã©quipe et des 3 patineurs et leurs dossards des 2 Ã©quipes de l'Ã©preuve en cours.
  * \auteurs M. BEN BELKACEM, R. CATARINO, M. RICHARD
  * \param[in] liste_equipes
- * \fonction d'affichage, aucune variable modifiée ou renvoyée
+ * \fonction d'affichage, aucune variable modifiÃ©e ou renvoyÃ©e
  * \return void
  */
 void afficher_equipes(const Competition* liste_equipes) {
@@ -101,10 +101,10 @@ void afficher_equipes(const Competition* liste_equipes) {
 }
 
 /*
- * Fonction auxiliaire : trouve le numéro de l'équipe et du patineur à partir du numéro de dossard
+ * Fonction auxiliaire : trouve le numÃ©ro de l'Ã©quipe et du patineur Ã  partir du numÃ©ro de dossard
  * \auteurs M. BEN BELKACEM, R. CATARINO, M. RICHARD
- * \param[in] dossard : numéro du dossard envoyé
- * \param[in-out] num_equipe et num_patineur : numéros d'équipe et de patineur, permettant d'enregistrer un temps
+ * \param[in] dossard : numÃ©ro du dossard envoyÃ©
+ * \param[in-out] num_equipe et num_patineur : numÃ©ros d'Ã©quipe et de patineur, permettant d'enregistrer un temps
  * \return void
  */
 void trouver_dossard(unsigned int dossard, unsigned int* num_equipe, unsigned int* num_patineur) {
@@ -118,10 +118,10 @@ void trouver_dossard(unsigned int dossard, unsigned int* num_equipe, unsigned in
 }
 
 /*
- * Cette fonction enregistre le temps d'un patineur dans la variable liste_equipes, met à jour l'épreuve actuelle et appelle la fonction detection_fin_parcours
+ * Cette fonction enregistre le temps d'un patineur dans la variable liste_equipes, met Ã  jour l'Ã©preuve actuelle et appelle la fonction detection_fin_parcours
  * \auteurs M. BEN BELKACEM, R. CATARINO, M. RICHARD
  * \param[in-out] liste_equipes qui va recevoir un temps de patineur
- * \param[scan] Variables intermédiaires : num_equipe, num_patineur, temps
+ * \param[scan] Variables intermÃ©diaires : num_equipe, num_patineur, temps
  * \return void
  */
 void enregistrement_temps(Competition* liste_equipes) {
@@ -140,12 +140,12 @@ void enregistrement_temps(Competition* liste_equipes) {
 }
 
 /*
- * Cette fonction affiche pour un numéro de dossard scanné :
-	le pays, le tour, le nom et le temps du patineur à ce tour, pour chaque tour effectué
+ * Cette fonction affiche pour un numÃ©ro de dossard scannÃ© :
+	le pays, le tour, le nom et le temps du patineur Ã  ce tour, pour chaque tour effectuÃ©
  * \auteurs M. BEN BELKACEM, R. CATARINO, M. RICHARD
  * \param[in] liste_equipe
- * \param[scan] dossard : numéro du dossard du patineur recherché
- * \fonction d'affichage, aucune variable modifiée ou renvoyée
+ * \param[scan] dossard : numÃ©ro du dossard du patineur recherchÃ©
+ * \fonction d'affichage, aucune variable modifiÃ©e ou renvoyÃ©e
  * \return void
  */
 void affichage_temps(const Competition* liste_equipes) {
@@ -164,10 +164,10 @@ void affichage_temps(const Competition* liste_equipes) {
 }
 
 /*
- * Fonction auxiliaire : permet d'obtenir le dernier tour effectué par tous les patineurs d'une équipe
+ * Fonction auxiliaire : permet d'obtenir le dernier tour effectuÃ© par tous les patineurs d'une Ã©quipe
  * \auteurs M. BEN BELKACEM, R. CATARINO, M. RICHARD
- * \param[in] equipe de type Equipe : l'équipe dont on cherche le tour actuel
- * \return le numéro du tour du patineur le plus loin
+ * \param[in] equipe de type Equipe : l'Ã©quipe dont on cherche le tour actuel
+ * \return le numÃ©ro du tour du patineur le plus loin
  */
 unsigned int compare_tour_equipe(Equipe equipe) {
 	unsigned int a = 0; a = equipe.personnes[0].tours;
@@ -180,10 +180,10 @@ unsigned int compare_tour_equipe(Equipe equipe) {
 }
 
 /*
- * Fonction auxiliaire : permet d'obtenir le pire temps effectué par tous les patineurs d'une équipe
+ * Fonction auxiliaire : permet d'obtenir le pire temps effectuÃ© par tous les patineurs d'une Ã©quipe
  * \auteurs M. BEN BELKACEM, R. CATARINO, M. RICHARD
- * \param[in] equipe de type Equipe : l'équipe dont on cherche le temps, et tour_actuel : le tour qu'on recherche
- * \return le temps du pire patineur pour le tour demandé
+ * \param[in] equipe de type Equipe : l'Ã©quipe dont on cherche le temps, et tour_actuel : le tour qu'on recherche
+ * \return le temps du pire patineur pour le tour demandÃ©
  */
 float compare_temps_joueurs(Equipe equipe, int tour_actuel) {
 	tour_actuel--;
@@ -198,11 +198,11 @@ float compare_temps_joueurs(Equipe equipe, int tour_actuel) {
 }
 
 /*
- * Cette fonction afficher le temps des équipes de l'épreuve en cours à un tour donné. Si le temps n'est pas encore réalisé : affiche indisponible
+ * Cette fonction afficher le temps des Ã©quipes de l'Ã©preuve en cours Ã  un tour donnÃ©. Si le temps n'est pas encore rÃ©alisÃ© : affiche indisponible
  * \auteurs M. BEN BELKACEM, R. CATARINO, M. RICHARD
  * \param[in] liste_equipes
- * \param[scan] tour : numéro du tour recherché
- * \fonction d'affichage, aucune variable modifiée ou renvoyée
+ * \param[scan] tour : numÃ©ro du tour recherchÃ©
+ * \fonction d'affichage, aucune variable modifiÃ©e ou renvoyÃ©e
  * \return void
  */
 void affichage_temps_equipes(Competition* liste_equipes) {
@@ -224,12 +224,12 @@ void affichage_temps_equipes(Competition* liste_equipes) {
 }
 
 /*
- * Cette fonction détecte la fin d'une poursuite puis affiche :
-	"detection_fin_poursuite" puis les noms et temps des équipes de l'épreuve par ordre croissant de temps
-	détecte aussi la fin de compétition en appelant la fonciton detection_fin_competition
+ * Cette fonction dÃ©tecte la fin d'une poursuite puis affiche :
+	"detection_fin_poursuite" puis les noms et temps des Ã©quipes de l'Ã©preuve par ordre croissant de temps
+	dÃ©tecte aussi la fin de compÃ©tition en appelant la fonciton detection_fin_competition
  * \auteurs M. BEN BELKACEM, R. CATARINO, M. RICHARD
  * \param[in] liste_equipes
- * \fonction d'affichage, aucune variable modifiée ou renvoyée
+ * \fonction d'affichage, aucune variable modifiÃ©e ou renvoyÃ©e
  * \return void
  */
 void detection_fin_parcours(Competition* liste_equipes) {
@@ -258,11 +258,11 @@ void detection_fin_parcours(Competition* liste_equipes) {
 
 /*
  * Cette fonction affiche :
-	"detection_fin_competition" puis les noms et temps des équipes de toute la competition par odre croissant de temps
+	"detection_fin_competition" puis les noms et temps des Ã©quipes de toute la competition par odre croissant de temps
 	appelle la fonction trier_equipes
  * \auteurs M. BEN BELKACEM, R. CATARINO, M. RICHARD
  * \param[in] liste_equipes
- * \fonction d'affichage, aucune variable modifiée ou renvoyée
+ * \fonction d'affichage, aucune variable modifiÃ©e ou renvoyÃ©e
  * \return void
  */
 void detection_fin_competition(Competition* liste_equipes){
@@ -277,7 +277,7 @@ void detection_fin_competition(Competition* liste_equipes){
 }
 
 /*
- * Fonction auxiliaire : permet de trier les équipes de liste_equipes par ordre croissant de temps
+ * Fonction auxiliaire : permet de trier les Ã©quipes de liste_equipes par ordre croissant de temps
  * \auteurs M. BEN BELKACEM, R. CATARINO, M. RICHARD
  * \param[in-out] liste_equipes
  * \return void
@@ -299,9 +299,9 @@ void trier_equipes(Competition* liste_equipes){
 }
 
 /*
- * Fonction auxiliaire : permet d'initialiser tous les temps d'une équipe à -1
+ * Fonction auxiliaire : permet d'initialiser tous les temps d'une Ã©quipe Ã  -1
  * \auteurs M. BEN BELKACEM, R. CATARINO, M. RICHARD
- * \param[in-out] equipe de type Equipe : l'équipe qu'on vient d'inscrire
+ * \param[in-out] equipe de type Equipe : l'Ã©quipe qu'on vient d'inscrire
  * \return void
  */
 void initialisation_temps(Equipe* equipe) {
@@ -316,7 +316,7 @@ void initialisation_temps(Equipe* equipe) {
 
 /*
  * Fonction main : scan les commandes de l'utilisateurs et appelle les fonctions principal
-	arrête le programme lorsqu'il reçoit "exit"
+	arrÃªte le programme lorsqu'il reÃ§oit "exit"
  *\auteurs M. BEN BELKACEM, R. CATARINO, M. RICHARD
  */
 int main() {
