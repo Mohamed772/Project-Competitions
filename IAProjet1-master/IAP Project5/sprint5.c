@@ -1,6 +1,7 @@
 /*Projet : Gestion d'une compétion de poursuite par équipe
 Créé le : 07/10/2019
-Auteurs : Mohamed BEN BELKASEN, Raphaël CATARINO, Manil RICHARD*/
+Auteurs : Mohamed BEN BELKACEN, Raphaël CATARINO, Manil RICHARD*/
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -17,7 +18,7 @@ Auteurs : Mohamed BEN BELKASEN, Raphaël CATARINO, Manil RICHARD*/
 
 typedef struct {
 	float temps;
-} Mesure;//structure de la mesure du temps
+} Mesure;// structure de la mesure du temps
 
 typedef struct {
 	char nom[lgMot + 1];
@@ -31,7 +32,7 @@ typedef struct {
 	char pays[lgMot + 1];
 	Mesure liste_temps[MAX_TOUR];
 	unsigned int tours;
-} Equipe;//structure contenant les informations d'une équipe
+} Equipe;// structure contenant les informations d'une équipe
 
 typedef struct {
 	Equipe equipes[MAX_EQUIPE];
@@ -39,143 +40,172 @@ typedef struct {
 	unsigned int tour_max;
 	unsigned int epreuves_max;
 	unsigned int epreuve_actuel;
-} Course; // /!\ structure définissant toute la competition
+} Competition; // structure définissant toute la competition
 
-
-void inscrire_equipe(Course* liste_equipes);
-void afficher_equipes(const Course* liste_equipes);
+// ensemble de tous les prototypes des fonctions du projet
+void inscrire_equipe(Competition* liste_equipes);
+void afficher_equipes(const Competition* liste_equipes);
 void trouver_dossard(unsigned int dossard, unsigned int* num_equipe, unsigned int* num_patineur);
-void enregistrement_temps(Course* liste_equipes);
-void affichage_temps(const Course* liste_equipes);
+void enregistrement_temps(Competition* liste_equipes);
+void affichage_temps(const Competition* liste_equipes);
 unsigned int compare_tour_equipe(Equipe equipe);
 float compare_temps_joueurs(Equipe equipe, int tour_actuel);
-void affichage_temps_equipes(Course* liste_equipes);
-void detection_fin_parcours(Course* liste_equipes);
-void detection_fin_competition(Course* liste_equipes);
-void trier_equipes(Course* liste_equipes);
+void affichage_temps_equipes(Competition* liste_equipes);
+void detection_fin_parcours(Competition* liste_equipes);
+void detection_fin_competition(Competition* liste_equipes);
+void trier_equipes(Competition* liste_equipes);
 void initialisation_temps(Equipe* equipe);
 
-
-void inscrire_equipe(Course* liste_equipes) {
-	Equipe e;
+/*
+ * Cette fonction enregistre le nom de l'équipe et des 3 patineurs et leurs dossards dans la variable liste_equipes.
+	appelle la fonction initialisation_temps
+ * \auteurs M. BEN BELKACEM, R. CATARINO, M. RICHARD
+ * \param[in-out] liste_equipes qui va recevoir les informations d'une équipe e.
+ * \param[scan] Variable intermédiaire e de type Equipe. Stocke les informations reçues.
+ * \return void
+ */
+void inscrire_equipe(Competition* liste_equipes) {
+	Equipe e; char mot[lgMot + 1]; static unsigned int dos = 101;
 	initialisation_temps(&e);
-	char mot[lgMot + 1];
-	static unsigned int dos = 101;
+
 	if (liste_equipes->compteur_nb_equipes <= MAX_EQUIPE) {
 		scanf("%s", &mot);
 		strcpy(e.pays, mot);
-
 		for (int i = 0; i <= MAX_JOUEUR_PAR_EQUIPE - 1; ++i) {
 			scanf("%s", &mot);
 			strcpy(e.personnes[i].nom, mot);
 			e.personnes[i].num_dossard = dos++;
 			e.personnes[i].tours = 0;
-			printf("inscription dossard %d\n", e.personnes[i].num_dossard);
-		}
-
+			printf("inscription dossard %d\n", e.personnes[i].num_dossard);}
 		liste_equipes->equipes[liste_equipes->compteur_nb_equipes] = e;
 		liste_equipes->compteur_nb_equipes += 1;
 	}
-	else
-		printf("Vous avez deja atteint le nombre d'equipe maximale");
+	else printf("Vous avez deja atteint le nombre d'equipe maximale");
 }
 
-void afficher_equipes(const Course* liste_equipes) {
+/*
+ * Cette fonction afficher le nom de l'équipe et des 3 patineurs et leurs dossards des 2 équipes de l'épreuve en cours.
+ * \auteurs M. BEN BELKACEM, R. CATARINO, M. RICHARD
+ * \param[in] liste_equipes
+ * \fonction d'affichage, aucune variable modifiée ou renvoyée
+ * \return void
+ */
+void afficher_equipes(const Competition* liste_equipes) {
 	unsigned int i = liste_equipes->epreuve_actuel * 2;
+
 	for (unsigned int j = i; j < i + NB_EQUIPE_EPREUVE;j++) {
 		printf("%s %s %u %s %u %s %u\n", liste_equipes->equipes[j].pays, liste_equipes->equipes[j].personnes[0].nom,
 			liste_equipes->equipes[j].personnes[0].num_dossard, liste_equipes->equipes[j].personnes[1].nom,
 			liste_equipes->equipes[j].personnes[1].num_dossard, liste_equipes->equipes[j].personnes[2].nom,
-			liste_equipes->equipes[j].personnes[2].num_dossard);
-	}
+			liste_equipes->equipes[j].personnes[2].num_dossard);}
 }
 
+/*
+ * Fonction auxiliaire : trouve le numéro de l'équipe et du patineur à partir du numéro de dossard
+ * \auteurs M. BEN BELKACEM, R. CATARINO, M. RICHARD
+ * \param[in] dossard : numéro du dossard envoyé
+ * \param[in-out] num_equipe et num_patineur : numéros d'équipe et de patineur, permettant d'enregistrer un temps
+ * \return void
+ */
 void trouver_dossard(unsigned int dossard, unsigned int* num_equipe, unsigned int* num_patineur) {
 	dossard -= 100;
-
 	if ((dossard % 3) == 0) {
 		*num_equipe = (dossard / 3) - 1;
-		*num_patineur = 2;
-	}
+		*num_patineur = 2;}
 	else {
 		*num_equipe = (dossard / 3);
-		*num_patineur = (dossard % 3) - 1;
-	}
+		*num_patineur = (dossard % 3) - 1;}
 }
 
-void enregistrement_temps(Course* liste_equipes) {
+/*
+ * Cette fonction enregistre le temps d'un patineur dans la variable liste_equipes, met à jour l'épreuve actuelle et appelle la fonction detection_fin_parcours
+ * \auteurs M. BEN BELKACEM, R. CATARINO, M. RICHARD
+ * \param[in-out] liste_equipes qui va recevoir un temps de patineur
+ * \param[scan] Variables intermédiaires : num_equipe, num_patineur, temps
+ * \return void
+ */
+void enregistrement_temps(Competition* liste_equipes) {
 	unsigned int num_equipe = 0, num_patineur, dossard, num_tours;
 	float temps;
 
 	scanf("%u %u %f", &dossard, &num_tours, &temps);
 	if (num_tours <= liste_equipes->tour_max) {
 		trouver_dossard(dossard, &num_equipe, &num_patineur);
-
 		liste_equipes->equipes[num_equipe].personnes[num_patineur].tours = num_tours;
-		liste_equipes->equipes[num_equipe].personnes[num_patineur].liste_temps[num_tours - 1].temps = temps;
-	}
-	else printf("Heu ca fais pas un peu beaucoup la non ?");
-
+		liste_equipes->equipes[num_equipe].personnes[num_patineur].liste_temps[num_tours - 1].temps = temps;}
 	liste_equipes->equipes[num_equipe].tours = compare_tour_equipe(liste_equipes->equipes[num_equipe]);
 	liste_equipes->equipes[num_equipe].liste_temps[num_tours - 1].temps = compare_temps_joueurs(liste_equipes->equipes[num_equipe], num_tours);
 	detection_fin_parcours(liste_equipes);
 	liste_equipes->epreuve_actuel = (num_equipe / 2);
 }
 
-void affichage_temps(const Course* liste_equipes) {
+/*
+ * Cette fonction affiche pour un numéro de dossard scanné :
+	le pays, le tour, le nom et le temps du patineur à ce tour, pour chaque tour effectué
+ * \auteurs M. BEN BELKACEM, R. CATARINO, M. RICHARD
+ * \param[in] liste_equipe
+ * \param[scan] dossard : numéro du dossard du patineur recherché
+ * \fonction d'affichage, aucune variable modifiée ou renvoyée
+ * \return void
+ */
+void affichage_temps(const Competition* liste_equipes) {
 	unsigned int num_equipe, num_patineur, dossard, num_tours = 0, i = 0;
-
 
 	scanf("%u", &dossard);
 	trouver_dossard(dossard, &num_equipe, &num_patineur);
-
 	num_tours = liste_equipes->equipes[num_equipe].personnes[num_patineur].tours;
 
 	while (i < num_tours) {
-
 		printf("%s %u %s %.1f\n", liste_equipes->equipes[num_equipe].pays,
 			i + 1,
 			liste_equipes->equipes[num_equipe].personnes[num_patineur].nom,
 			liste_equipes->equipes[num_equipe].personnes[num_patineur].liste_temps[i].temps);
-		i++;
-	}
+		i++;}
 }
 
+/*
+ * Fonction auxiliaire : permet d'obtenir le dernier tour effectué par tous les patineurs d'une équipe
+ * \auteurs M. BEN BELKACEM, R. CATARINO, M. RICHARD
+ * \param[in] equipe de type Equipe : l'équipe dont on cherche le tour actuel
+ * \return le numéro du tour du patineur le plus loin
+ */
 unsigned int compare_tour_equipe(Equipe equipe) {
 	unsigned int a = 0; a = equipe.personnes[0].tours;
 	unsigned int b = 0; b = equipe.personnes[1].tours;
 	unsigned int c = 0; c = equipe.personnes[2].tours;
 
-	if ((a <= b) && (a <= c)) {
-		return a;
-	}
-	else if (b <= c) {
-		return b;
-	}
-	else
-		return c;
+	if ((a <= b) && (a <= c)) return a;
+	else if (b <= c) return b;
+	else return c;
 }
 
+/*
+ * Fonction auxiliaire : permet d'obtenir le pire temps effectué par tous les patineurs d'une équipe
+ * \auteurs M. BEN BELKACEM, R. CATARINO, M. RICHARD
+ * \param[in] equipe de type Equipe : l'équipe dont on cherche le temps, et tour_actuel : le tour qu'on recherche
+ * \return le temps du pire patineur pour le tour demandé
+ */
 float compare_temps_joueurs(Equipe equipe, int tour_actuel) {
 	tour_actuel--;
 	float a = equipe.personnes[0].liste_temps[tour_actuel].temps;
 	float b = equipe.personnes[1].liste_temps[tour_actuel].temps;
 	float c = equipe.personnes[2].liste_temps[tour_actuel].temps;
 
-	if ((a == -1.) || (b == -1.) || (c == -1.))
-		return -1.;
-
-	if ((a >= b) && (a >= c)) {
-		return a;
-	}
-	else if (b >= c) {
-		return b;
-	}
+	if ((a == -1.) || (b == -1.) || (c == -1.)) return -1.;
+	if ((a >= b) && (a >= c)) return a;
+	else if (b >= c) return b;
 	else return c;
-
 }
 
-void affichage_temps_equipes(Course* liste_equipes) {
+/*
+ * Cette fonction afficher le temps des équipes de l'épreuve en cours à un tour donné. Si le temps n'est pas encore réalisé : affiche indisponible
+ * \auteurs M. BEN BELKACEM, R. CATARINO, M. RICHARD
+ * \param[in] liste_equipes
+ * \param[scan] tour : numéro du tour recherché
+ * \fonction d'affichage, aucune variable modifiée ou renvoyée
+ * \return void
+ */
+void affichage_temps_equipes(Competition* liste_equipes) {
 	unsigned int tour;
 	scanf("%u", &tour);
 	unsigned int i = liste_equipes->epreuve_actuel*2;
@@ -193,45 +223,66 @@ void affichage_temps_equipes(Course* liste_equipes) {
 	
 }
 
-void detection_fin_parcours(Course* liste_equipes) {
+/*
+ * Cette fonction détecte la fin d'une poursuite puis affiche :
+	"detection_fin_poursuite" puis les noms et temps des équipes de l'épreuve par ordre croissant de temps
+	détecte aussi la fin de compétition en appelant la fonciton detection_fin_competition
+ * \auteurs M. BEN BELKACEM, R. CATARINO, M. RICHARD
+ * \param[in] liste_equipes
+ * \fonction d'affichage, aucune variable modifiée ou renvoyée
+ * \return void
+ */
+void detection_fin_parcours(Competition* liste_equipes) {
 	unsigned int tour_max = liste_equipes->tour_max;
 	static unsigned int compteur_fin_parcours=0;
 	static unsigned char etat_parcours[16] = { 0 };
 
 	for (unsigned int i = 0; i < liste_equipes->compteur_nb_equipes; i += 2) {
 		if ((liste_equipes->equipes[i].tours == tour_max) && (liste_equipes->equipes[i + 1].tours == tour_max) && etat_parcours[i/2] == 0) {
-			
 			printf("detection_fin_poursuite\n");
+
 			if (liste_equipes->equipes[i].liste_temps[tour_max - 1].temps <= liste_equipes->equipes[i + 1].liste_temps[tour_max - 1].temps){
 				printf("%s %.1f\n", liste_equipes->equipes[i].pays, liste_equipes->equipes[i].liste_temps[tour_max - 1].temps);
-				printf("%s %.1f\n", liste_equipes->equipes[i + 1].pays, liste_equipes->equipes[i + 1].liste_temps[tour_max - 1].temps);
-			}
+				printf("%s %.1f\n", liste_equipes->equipes[i + 1].pays, liste_equipes->equipes[i + 1].liste_temps[tour_max - 1].temps);}
+
 			else if (liste_equipes->equipes[i].liste_temps[tour_max - 1].temps > liste_equipes->equipes[i + 1].liste_temps[tour_max - 1].temps){
 				printf("%s %.1f\n", liste_equipes->equipes[i + 1].pays, liste_equipes->equipes[i + 1].liste_temps[tour_max - 1].temps);
-				printf("%s %.1f\n", liste_equipes->equipes[i].pays, liste_equipes->equipes[i].liste_temps[tour_max - 1].temps);
-			}
+				printf("%s %.1f\n", liste_equipes->equipes[i].pays, liste_equipes->equipes[i].liste_temps[tour_max - 1].temps);}
 			etat_parcours[i/2] = 1;
 			compteur_fin_parcours++;
 			liste_equipes->epreuve_actuel++;
 		}
 	}
-	if (liste_equipes->epreuves_max == compteur_fin_parcours)
-		detection_fin_competition(liste_equipes);
+	if (liste_equipes->epreuves_max == compteur_fin_parcours) detection_fin_competition(liste_equipes);
 }
 
-void detection_fin_competition(Course* liste_equipes){
-	unsigned int courses_max = liste_equipes->epreuves_max;
+/*
+ * Cette fonction affiche :
+	"detection_fin_competition" puis les noms et temps des équipes de toute la competition par odre croissant de temps
+	appelle la fonction trier_equipes
+ * \auteurs M. BEN BELKACEM, R. CATARINO, M. RICHARD
+ * \param[in] liste_equipes
+ * \fonction d'affichage, aucune variable modifiée ou renvoyée
+ * \return void
+ */
+void detection_fin_competition(Competition* liste_equipes){
+	unsigned int Competitions_max = liste_equipes->epreuves_max;
 	unsigned int tour_max = liste_equipes->tour_max;
-
 	trier_equipes(liste_equipes);
 	printf("detection_fin_competition\n");
 
-	for (unsigned int i = 0; i < (courses_max*NB_EQUIPE_EPREUVE); i++){
+	for (unsigned int i = 0; i < (Competitions_max*NB_EQUIPE_EPREUVE); i++){
 		printf("%s %.1f\n", liste_equipes->equipes[i].pays, liste_equipes->equipes[i].liste_temps[tour_max - 1].temps);
 	}
 }
 
-void trier_equipes(Course* liste_equipes){
+/*
+ * Fonction auxiliaire : permet de trier les équipes de liste_equipes par ordre croissant de temps
+ * \auteurs M. BEN BELKACEM, R. CATARINO, M. RICHARD
+ * \param[in-out] liste_equipes
+ * \return void
+ */
+void trier_equipes(Competition* liste_equipes){
 	unsigned int n = liste_equipes->compteur_nb_equipes;
 	Equipe stockage;
 	int j;
@@ -242,12 +293,17 @@ void trier_equipes(Course* liste_equipes){
 		j = i;
 		while (j > 0 && (liste_equipes->equipes[j-1].liste_temps[tour_max].temps > stockage.liste_temps[tour_max].temps)){
 			liste_equipes->equipes[j] = liste_equipes->equipes[j - 1];
-			j--;
-		}
+			j--;}
 		liste_equipes->equipes[j] = stockage;
 	}
 }
 
+/*
+ * Fonction auxiliaire : permet d'initialiser tous les temps d'une équipe à -1
+ * \auteurs M. BEN BELKACEM, R. CATARINO, M. RICHARD
+ * \param[in-out] equipe de type Equipe : l'équipe qu'on vient d'inscrire
+ * \return void
+ */
 void initialisation_temps(Equipe* equipe) {
 	for (unsigned int j = 0; j < MAX_TOUR; j++) {
 		equipe->liste_temps[j].temps = -1.;
@@ -258,11 +314,14 @@ void initialisation_temps(Equipe* equipe) {
 }
 
 
-
+/*
+ * Fonction main : scan les commandes de l'utilisateurs et appelle les fonctions principal
+	arrête le programme lorsqu'il reçoit "exit"
+ *\auteurs M. BEN BELKACEM, R. CATARINO, M. RICHARD
+ */
 int main() {
-	Course liste_equipes;
+	Competition liste_equipes;
 	liste_equipes.compteur_nb_equipes = 0;
-
 	char mot[lgMot + 1];
 
 	do {
