@@ -39,7 +39,7 @@ typedef struct {
 	unsigned int compteur_nb_equipes;
 	unsigned int tour_max;
 	unsigned int epreuves_max;
-	unsigned int epreuve_actuel;
+	unsigned int epreuve_actuelle;
 } Competition; // structure définissant toute la competition
 
 // ensemble de tous les prototypes des fonctions du projet
@@ -91,7 +91,7 @@ void inscrire_equipe(Competition* liste_equipes) {
  * \return void
  */
 void afficher_equipes(const Competition* liste_equipes) {
-	unsigned int i = liste_equipes->epreuve_actuel * 2;
+	unsigned int i = liste_equipes->epreuve_actuelle * 2;
 
 	for (unsigned int j = i; j < i + NB_EQUIPE_EPREUVE;j++) {
 		printf("%s %s %u %s %u %s %u\n", liste_equipes->equipes[j].pays, liste_equipes->equipes[j].personnes[0].nom,
@@ -136,7 +136,7 @@ void enregistrement_temps(Competition* liste_equipes) {
 	liste_equipes->equipes[num_equipe].tours = compare_tour_equipe(liste_equipes->equipes[num_equipe]);
 	liste_equipes->equipes[num_equipe].liste_temps[num_tours - 1].temps = compare_temps_joueurs(liste_equipes->equipes[num_equipe], num_tours);
 	detection_fin_parcours(liste_equipes);
-	liste_equipes->epreuve_actuel = (num_equipe / 2);
+	liste_equipes->epreuve_actuelle = (num_equipe / 2);
 }
 
 /*
@@ -208,7 +208,7 @@ float compare_temps_joueurs(Equipe equipe, int tour_actuel) {
 void affichage_temps_equipes(Competition* liste_equipes) {
 	unsigned int tour;
 	scanf("%u", &tour);
-	unsigned int i = liste_equipes->epreuve_actuel*2;
+	unsigned int i = liste_equipes->epreuve_actuelle*2;
 	
 	liste_equipes->equipes[i].liste_temps[tour - 1].temps = compare_temps_joueurs(liste_equipes->equipes[i], tour);
 	liste_equipes->equipes[i + 1].liste_temps[tour - 1].temps = compare_temps_joueurs(liste_equipes->equipes[i + 1], tour);
@@ -250,7 +250,7 @@ void detection_fin_parcours(Competition* liste_equipes) {
 				printf("%s %.1f\n", liste_equipes->equipes[i].pays, liste_equipes->equipes[i].liste_temps[tour_max - 1].temps);}
 			etat_parcours[i/2] = 1;
 			compteur_fin_parcours++;
-			liste_equipes->epreuve_actuel++;
+			liste_equipes->epreuve_actuelle++;
 		}
 	}
 	if (liste_equipes->epreuves_max == compteur_fin_parcours) detection_fin_competition(liste_equipes);
